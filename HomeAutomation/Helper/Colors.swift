@@ -27,7 +27,7 @@ extension Color {
     
     static let Bg = Color(hex: "#E5EDF4")
     static let Primary = Color(hex: "#01337A")
-//    static let BtnGreen = Color(hex: "#51AF33")
+    static let CardBg = Color(hex: "#EEEFF1")
 //    static let BtnGray = Color(hex: "#757575")
 //    static let LoginBG = Color(hex: "#F1F2F6")
 }

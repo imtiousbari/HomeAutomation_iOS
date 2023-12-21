@@ -26,6 +26,10 @@ struct ProfileButton: View {
                 .background(Circle().foregroundColor(Color.white))
                 .shadow(radius: 4)
         }
+        
+//        Image("bell.badge.fill")
+//            .resizable()
+//            .frame(width: 25, height: 25)
         .onTapGesture {
             // You can add an action here if you want to perform something on tap
         }
