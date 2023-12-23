@@ -11,7 +11,10 @@ struct HomeView: View {
     var body: some View {
         VStack{
             HeroView()
-            Spacer()
+            Hero2View()
+            HomeViewQ()
+//            Spacer()
+            
         }
         .background(Color.Bg)
     }
@@ -19,54 +22,44 @@ struct HomeView: View {
 
 struct HeroView: View {
     var body: some View {
-        VStack {
-            ZStack(alignment: .bottom){
-                ZStack{
-                    Rectangle()
-                        .frame(width: 400, height: 250)
-                        .cornerRadius(20)
-                        .foregroundColor(Color.Primary)
-                        .overlay(
-                            VStack{
-                                HStack{
-                                    HStack(alignment: .center){
-                                        Image("SunWeater")
-                                            .resizable()
-                                            .frame(width: 20, height: 20)
-                                        Text("28°C")
-                                            .font(.system(size: 14))
-                                    }
-                                    HStack(alignment: .center){
-                                        Image("humidity")
-                                            .resizable()
-                                            .frame(width: 20, height: 20)
-                                        Text("28°C")
-                                            .font(.system(size: 14))
-                                        
-                                    }
-                                    HStack(alignment: .center){
-                                        Image("calendar")
-                                            .resizable()
-                                            .frame(width: 20, height: 20)
-                                        Text("Wed, May 24th")
-                                            .font(.system(size: 14))
-                                    }
-                                    Spacer()
-                                    ProfileButton()
-                                }
-                                
-                                .padding(.bottom,100)
-                            }
-                                .foregroundColor(.white)
-                                .padding()
-                        )
-                    Image("IsolationMode")
-                        .resizable()
-                        .frame(width: 250, height: 140)
-                        .padding(.leading,130)
-                        .padding(.bottom,-150)
-                    
-                    
+            ZStack {
+                Color.Primary
+                    .edgesIgnoringSafeArea(.all)
+                             
+                Image("IsolationMode")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 300, height: 50)
+                    .foregroundColor(.white)
+                    .padding()
+                    .offset( x:30, y: 80)
+                VStack{
+                    HStack{
+                        HStack(alignment: .center){
+                            Image("SunWeater")
+                                .resizable()
+                                .frame(width: 20, height: 20)
+                            Text("28°C")
+                                .font(.system(size: 14))
+                        }
+                        HStack(alignment: .center){
+                            Image("humidity")
+                                .resizable()
+                                .frame(width: 20, height: 20)
+                            Text("28°C")
+                                .font(.system(size: 14))
+                            
+                        }
+                        HStack(alignment: .center){
+                            Image("calendar")
+                                .resizable()
+                                .frame(width: 20, height: 20)
+                            Text("Wed, May 24th")
+                                .font(.system(size: 14))
+                        }
+                        Spacer()
+                        ProfileButton()
+                    }
                     HStack{
                         
                         Text("Hi, Nafiz Zaman")
@@ -83,19 +76,18 @@ struct HeroView: View {
                             .foregroundColor(.white)
                     }
                     .padding(.top, 30)
-                    .padding()
+//                    .padding()
+                    
                 }
-                Hero2View()
-                    .offset(y: 50)
+                .foregroundColor(.white)
+                .padding()
+                .padding(.bottom,50)
             }
+            .frame(width: 400, height: 250)
+            .cornerRadius(20)
+//            .edgesIgnoringSafeArea(.all)
         }
-        .background(Color.Bg)
-        .edgesIgnoringSafeArea(.all)
     }
-}
-
-
-
 
 struct Hero2View: View {
     var body: some View {
@@ -104,8 +96,11 @@ struct Hero2View: View {
             CardView(imageName: "moon", text: "Good night")
             CardView(imageName: "goout", text: "Go out")
         }
+        .padding(.bottom,10)
+        .padding(.top, -70)
     }
 }
+
 
 #Preview {
     HomeView()
