@@ -13,8 +13,6 @@ struct HomeView: View {
             HeroView()
             Hero2View()
             HomeViewQ()
-//            Spacer()
-            
         }
         .background(Color.Bg)
     }
@@ -32,7 +30,7 @@ struct HeroView: View {
                     .frame(width: 300, height: 50)
                     .foregroundColor(.white)
                     .padding()
-                    .offset( x:30, y: 80)
+                    .offset( x:50, y: 80)
                 VStack{
                     HStack{
                         HStack(alignment: .center){
@@ -75,9 +73,7 @@ struct HeroView: View {
                             .frame(width: 20, height: 25)
                             .foregroundColor(.white)
                     }
-                    .padding(.top, 30)
-//                    .padding()
-                    
+                    .padding(.top, 30) 
                 }
                 .foregroundColor(.white)
                 .padding()
@@ -85,7 +81,6 @@ struct HeroView: View {
             }
             .frame(width: 400, height: 250)
             .cornerRadius(20)
-//            .edgesIgnoringSafeArea(.all)
         }
     }
 

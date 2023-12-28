@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		726BF9492B36B63000AB8122 /* Workinprogress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726BF9482B36B63000AB8122 /* Workinprogress.swift */; };
 		726BF94B2B36C76600AB8122 /* HomeViewQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726BF94A2B36C76600AB8122 /* HomeViewQ.swift */; };
-		726BF94D2B36E90600AB8122 /* HomeViewN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726BF94C2B36E90600AB8122 /* HomeViewN.swift */; };
+		72AD31C32B382A3A00635BD2 /* SwitchCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AD31C22B382A3A00635BD2 /* SwitchCardView.swift */; };
 		72BE68752B315A2C003FAD7C /* HomeAutomationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BE68742B315A2C003FAD7C /* HomeAutomationApp.swift */; };
 		72BE68772B315A2C003FAD7C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BE68762B315A2C003FAD7C /* ContentView.swift */; };
 		72BE68792B315A2D003FAD7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72BE68782B315A2D003FAD7C /* Assets.xcassets */; };
@@ -24,7 +24,7 @@
 /* Begin PBXFileReference section */
 		726BF9482B36B63000AB8122 /* Workinprogress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workinprogress.swift; sourceTree = "<group>"; };
 		726BF94A2B36C76600AB8122 /* HomeViewQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewQ.swift; sourceTree = "<group>"; };
-		726BF94C2B36E90600AB8122 /* HomeViewN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewN.swift; sourceTree = "<group>"; };
+		72AD31C22B382A3A00635BD2 /* SwitchCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchCardView.swift; sourceTree = "<group>"; };
 		72BE68712B315A2C003FAD7C /* HomeAutomation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeAutomation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72BE68742B315A2C003FAD7C /* HomeAutomationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAutomationApp.swift; sourceTree = "<group>"; };
 		72BE68762B315A2C003FAD7C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				72BE688B2B341A2D003FAD7C /* CardView.swift */,
+				72AD31C22B382A3A00635BD2 /* SwitchCardView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -123,7 +124,6 @@
 				72BE68852B316460003FAD7C /* HomeView.swift */,
 				726BF94A2B36C76600AB8122 /* HomeViewQ.swift */,
 				726BF9482B36B63000AB8122 /* Workinprogress.swift */,
-				726BF94C2B36E90600AB8122 /* HomeViewN.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -236,9 +236,9 @@
 				72BE688A2B34056F003FAD7C /* Profile.swift in Sources */,
 				72BE68882B32AC00003FAD7C /* Colors.swift in Sources */,
 				72BE68772B315A2C003FAD7C /* ContentView.swift in Sources */,
+				72AD31C32B382A3A00635BD2 /* SwitchCardView.swift in Sources */,
 				72BE688C2B341A2D003FAD7C /* CardView.swift in Sources */,
 				726BF94B2B36C76600AB8122 /* HomeViewQ.swift in Sources */,
-				726BF94D2B36E90600AB8122 /* HomeViewN.swift in Sources */,
 				72BE68752B315A2C003FAD7C /* HomeAutomationApp.swift in Sources */,
 				726BF9492B36B63000AB8122 /* Workinprogress.swift in Sources */,
 			);
