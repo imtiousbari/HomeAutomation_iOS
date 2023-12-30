@@ -10,6 +10,7 @@ import SwiftUI
 struct Workinprogress: View {
     var body: some View {
         VStack{
+            Spacer()
             Text("This feature is currently under\n development")
                 .multilineTextAlignment(.center)
                 .padding()
@@ -17,11 +18,11 @@ struct Workinprogress: View {
             Image("workinprogress")
                 .resizable()
                 .scaledToFit()
+            Spacer()
         }
         .padding(50)
-        
         .background(Color.Bg)
-        .edgesIgnoringSafeArea(.all)
+//        .edgesIgnoringSafeArea(.all)
     }
 }
 

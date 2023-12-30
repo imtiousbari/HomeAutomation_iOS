@@ -15,7 +15,8 @@ struct ContentView: View {
 //                .foregroundStyle(.tint)
 //            Text("Hello, world!")
 //        }
-        HomeView()
+//        HomeView()
+        BottomNav()
 //        HomeViewN()
            
 //        .padding()

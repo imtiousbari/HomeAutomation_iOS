@@ -17,10 +17,13 @@ struct HomeViewQ: View {
 
 struct Header2V: View {
     @State private var selectedTab = 0
-    let tabTexts = ["My Home", "Kitchen", "Bathroom", "+ Add new"]
+    let tabTexts = ["My Home", "+ Add new"]
     
     let tabViews: [AnyView] = [
-        AnyView(SwitchView()),
+        AnyView(SwitchContent()),
+        AnyView(Workinprogress()),
+        AnyView(Workinprogress()),
+        AnyView(Workinprogress()),
         AnyView(Workinprogress())
        ]
     var body: some View {
