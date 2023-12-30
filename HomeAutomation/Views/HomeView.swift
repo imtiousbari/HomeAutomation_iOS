@@ -60,6 +60,7 @@ struct HeroView: View {
                     Spacer()
                     ProfileButton()
                 }
+                .padding(.top)
                 HStack{
                     
                     Text("Hi, Nafiz Zaman")
@@ -75,7 +76,7 @@ struct HeroView: View {
                         .frame(width: 20, height: 25)
                         .foregroundColor(.white)
                 }
-                .padding(.top, 30)
+                .padding(.top, 20)
             }
             .foregroundColor(.white)
             .padding()
