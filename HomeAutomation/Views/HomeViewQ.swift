@@ -17,7 +17,7 @@ struct HomeViewQ: View {
 
 struct Header2V: View {
     @State private var selectedTab = 0
-    let tabTexts = ["My Home", "+ Add new"]
+    let tabTexts = ["My Home"]
     
     let tabViews: [AnyView] = [
         AnyView(SwitchContent()),
@@ -47,7 +47,11 @@ struct Header2V: View {
                                     .onTapGesture {
                                         selectedTab = index
                                     }
+                                
+                                AddNewCat()
                             }
+                            
+                            
                         }
                         .padding(.leading, 20)
                         .padding(.top,5)

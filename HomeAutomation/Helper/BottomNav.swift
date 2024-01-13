@@ -43,7 +43,7 @@ struct BottomNav: View {
                          .tag(3)
                  }
                  .accentColor(Color.Primary)
-                 Spacer()
+//                 Spacer()
              }
 //             .foregroundColor(.white)
              .background(Color.Bg.edgesIgnoringSafeArea(.all))
@@ -55,3 +55,4 @@ struct BottomNav: View {
 #Preview {
     BottomNav()
 }
+
