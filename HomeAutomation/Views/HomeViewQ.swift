@@ -29,6 +29,7 @@ struct Header2V: View {
     var body: some View {
         NavigationView {
                 VStack {
+                    
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 15) {
                             ForEach(0..<tabTexts.count) { index in
@@ -48,7 +49,8 @@ struct Header2V: View {
                                         selectedTab = index
                                     }
                                 
-                                AddNewCat()
+                                    AddNewCat()
+//                                    .zIndex(99.00)
                             }
                             
                             

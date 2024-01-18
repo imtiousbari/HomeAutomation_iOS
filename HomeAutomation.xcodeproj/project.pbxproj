@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		72574AAA2B525DFB000F4C3C /* AddNewCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72574AA92B525DFB000F4C3C /* AddNewCat.swift */; };
+		72574AAC2B57A6F9000F4C3C /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72574AAB2B57A6F9000F4C3C /* BottomSheet.swift */; };
+		72574AAE2B57A9F2000F4C3C /* AddNewGrp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72574AAD2B57A9F2000F4C3C /* AddNewGrp.swift */; };
 		726BF9492B36B63000AB8122 /* Workinprogress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726BF9482B36B63000AB8122 /* Workinprogress.swift */; };
 		726BF94B2B36C76600AB8122 /* HomeViewQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726BF94A2B36C76600AB8122 /* HomeViewQ.swift */; };
 		72AD31C32B382A3A00635BD2 /* SwitchCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AD31C22B382A3A00635BD2 /* SwitchCardView.swift */; };
@@ -26,6 +28,8 @@
 
 /* Begin PBXFileReference section */
 		72574AA92B525DFB000F4C3C /* AddNewCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCat.swift; sourceTree = "<group>"; };
+		72574AAB2B57A6F9000F4C3C /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
+		72574AAD2B57A9F2000F4C3C /* AddNewGrp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewGrp.swift; sourceTree = "<group>"; };
 		726BF9482B36B63000AB8122 /* Workinprogress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workinprogress.swift; sourceTree = "<group>"; };
 		726BF94A2B36C76600AB8122 /* HomeViewQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewQ.swift; sourceTree = "<group>"; };
 		72AD31C22B382A3A00635BD2 /* SwitchCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchCardView.swift; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 				72BE688B2B341A2D003FAD7C /* CardView.swift */,
 				72AD31C22B382A3A00635BD2 /* SwitchCardView.swift */,
 				72574AA92B525DFB000F4C3C /* AddNewCat.swift */,
+				72574AAB2B57A6F9000F4C3C /* BottomSheet.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -133,6 +138,7 @@
 				72BE68852B316460003FAD7C /* HomeView.swift */,
 				726BF94A2B36C76600AB8122 /* HomeViewQ.swift */,
 				726BF9482B36B63000AB8122 /* Workinprogress.swift */,
+				72574AAD2B57A9F2000F4C3C /* AddNewGrp.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -251,7 +257,9 @@
 				72BE688C2B341A2D003FAD7C /* CardView.swift in Sources */,
 				726BF94B2B36C76600AB8122 /* HomeViewQ.swift in Sources */,
 				72574AAA2B525DFB000F4C3C /* AddNewCat.swift in Sources */,
+				72574AAE2B57A9F2000F4C3C /* AddNewGrp.swift in Sources */,
 				72BE68752B315A2C003FAD7C /* HomeAutomationApp.swift in Sources */,
+				72574AAC2B57A6F9000F4C3C /* BottomSheet.swift in Sources */,
 				726BF9492B36B63000AB8122 /* Workinprogress.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
