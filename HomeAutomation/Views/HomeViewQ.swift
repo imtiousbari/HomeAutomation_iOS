@@ -17,22 +17,50 @@ struct HomeViewQ: View {
 
 struct Header2V: View {
     @State private var selectedTab = 0
-    let tabTexts = ["My Home"]
+    @State var showingAlert = false
+    let tabTexts = ["My Home", "Add New Group", "New Tab 1", "New Tab 2"]
     
     let tabViews: [AnyView] = [
         AnyView(SwitchContent()),
-        AnyView(Workinprogress()),
+        //        AnyView(AddNewCat()),
         AnyView(Workinprogress()),
         AnyView(Workinprogress()),
         AnyView(Workinprogress())
-       ]
+    ]
     var body: some View {
         NavigationView {
-                VStack {
-                    
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 15) {
-                            ForEach(0..<tabTexts.count) { index in
+            VStack {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 15) {
+                        ForEach(0..<tabTexts.count) { index in
+                            if tabTexts[index] == "Add New Group"{
+                                //                                    AddNewCat()
+                                
+//                                Button("Show Alert") {
+//                                    showingAlert = true
+//                                }
+//                                .alert("Important message", isPresented: $showingAlert) {
+//                                    Button("OK", role: .cancel) { }
+//                                }
+                                
+                                                                    Button(action: {
+                                                                        showingAlert = true
+                                                                        //            AddNewGrp()
+                                                                        //                                        Alert(title: <#T##Text#>("Test"))
+                                                                        print("Show", showingAlert)
+                                
+                                                                    }) {
+                                                                        Text(tabTexts[index])
+                                                                            .font(.system(size: 14))
+                                                                            .foregroundColor(.black)
+                                                                            .padding(10)
+                                                                            .background(Color.white)
+                                                                            .cornerRadius(10)
+                                                                    }
+                                
+                                
+                            }
+                            else{
                                 Text(tabTexts[index])
                                     .font(.system(size: 14))
                                 
@@ -48,29 +76,34 @@ struct Header2V: View {
                                     .onTapGesture {
                                         selectedTab = index
                                     }
-                                
-                                    AddNewCat()
-//                                    .zIndex(99.00)
+                                //                                AddNewCat()
+                                //                                    AddNewCat()
+                                //                                    .zIndex(99.00)
                             }
-                            
-                            
                         }
-                        .padding(.leading, 20)
-                        .padding(.top,5)
+                        
+                        
                     }
-                    TabView(selection: $selectedTab) {
-                                            ForEach(0..<tabViews.count) { index in
-                                                tabViews[index]
-                                                    .tag(index)
-                                            }
-                                        }
-                    .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-                    .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+                    .padding(.leading, 20)
+                    .padding(.top,5)
                 }
-//                .offset(y: -30)
-                .background(Color.Bg)
-                .navigationBarHidden(true)
+                TabView(selection: $selectedTab) {
+                    ForEach(0..<tabViews.count) { index in
+                        tabViews[index]
+                            .tag(index)
+                    }
+                }
+                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+                .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+                
             }
+            //                .offset(y: -30)
+            .background(Color.Bg)
+            .navigationBarHidden(true)
+            
+        }
+                ModalAddGroup(isShowing: $showingAlert)
+        //            .background(Color.red)
     }
     
 }

@@ -10,6 +10,7 @@
 		72574AAA2B525DFB000F4C3C /* AddNewCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72574AA92B525DFB000F4C3C /* AddNewCat.swift */; };
 		72574AAC2B57A6F9000F4C3C /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72574AAB2B57A6F9000F4C3C /* BottomSheet.swift */; };
 		72574AAE2B57A9F2000F4C3C /* AddNewGrp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72574AAD2B57A9F2000F4C3C /* AddNewGrp.swift */; };
+		72574AB42B592890000F4C3C /* ModalAddGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72574AB32B592890000F4C3C /* ModalAddGroup.swift */; };
 		726BF9492B36B63000AB8122 /* Workinprogress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726BF9482B36B63000AB8122 /* Workinprogress.swift */; };
 		726BF94B2B36C76600AB8122 /* HomeViewQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726BF94A2B36C76600AB8122 /* HomeViewQ.swift */; };
 		72AD31C32B382A3A00635BD2 /* SwitchCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AD31C22B382A3A00635BD2 /* SwitchCardView.swift */; };
@@ -30,6 +31,7 @@
 		72574AA92B525DFB000F4C3C /* AddNewCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCat.swift; sourceTree = "<group>"; };
 		72574AAB2B57A6F9000F4C3C /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
 		72574AAD2B57A9F2000F4C3C /* AddNewGrp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewGrp.swift; sourceTree = "<group>"; };
+		72574AB32B592890000F4C3C /* ModalAddGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalAddGroup.swift; sourceTree = "<group>"; };
 		726BF9482B36B63000AB8122 /* Workinprogress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workinprogress.swift; sourceTree = "<group>"; };
 		726BF94A2B36C76600AB8122 /* HomeViewQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewQ.swift; sourceTree = "<group>"; };
 		72AD31C22B382A3A00635BD2 /* SwitchCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchCardView.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				72AD31C22B382A3A00635BD2 /* SwitchCardView.swift */,
 				72574AA92B525DFB000F4C3C /* AddNewCat.swift */,
 				72574AAB2B57A6F9000F4C3C /* BottomSheet.swift */,
+				72574AB32B592890000F4C3C /* ModalAddGroup.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				72FB0F6E2B3D983A00EC570B /* BottomNav.swift in Sources */,
 				72FC32A82B40013E003A48B0 /* CustomBtNv.swift in Sources */,
 				72BE68862B316460003FAD7C /* HomeView.swift in Sources */,
+				72574AB42B592890000F4C3C /* ModalAddGroup.swift in Sources */,
 				72BE688A2B34056F003FAD7C /* Profile.swift in Sources */,
 				72BE68882B32AC00003FAD7C /* Colors.swift in Sources */,
 				72BE68772B315A2C003FAD7C /* ContentView.swift in Sources */,
