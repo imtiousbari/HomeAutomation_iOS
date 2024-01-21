@@ -11,10 +11,11 @@ struct HomeView: View {
     var body: some View {
         VStack{
             HeroView()
-//                .background(Color.Primary)
+            //                .background(Color.Primary)
                 .edgesIgnoringSafeArea(.all)
             Hero2View()
             HomeViewQ()
+            
         }
         .background(Color.Bg)
     }
@@ -83,7 +84,8 @@ struct HeroView: View {
             .padding(.bottom,50)
         }
         .frame(width: 400, height: 250)
-        .cornerRadius(20)
+//        .cornerRadius(20)
+        .cornerRadius(20, corners: [/*.topLeft, .topRight,*/ .bottomLeft, .bottomRight])
     }
 }
 

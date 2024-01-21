@@ -21,7 +21,7 @@ struct BottomNav: View {
                          }
                          .tag(0)
                      
-                     Workinprogress()
+                     CusBootmSheet()
                          .tabItem {
                              Image(systemName: "info.circle")
                              Text("Control")
@@ -42,11 +42,13 @@ struct BottomNav: View {
                          }
                          .tag(3)
                  }
+//                 .background(Color.red)
                  .accentColor(Color.Primary)
+                 .colorScheme(.light)
 //                 Spacer()
              }
 //             .foregroundColor(.white)
-             .background(Color.Bg.edgesIgnoringSafeArea(.all))
+//             .background(Color.white.edgesIgnoringSafeArea(.all))
      }
      
  }

@@ -11,6 +11,8 @@ struct ModalAddGroup: View {
         
     @Binding var isShowing: Bool
     @State private var curHeight: CGFloat = 300
+    @State private var input1: String = ""
+        @State private var input2: String = ""
     
     let minHeight: CGFloat = 400
     let maxHeight: CGFloat = 500
@@ -48,18 +50,60 @@ struct ModalAddGroup: View {
             .gesture(dragGesture)
             
             ZStack{
+
                 VStack{
-                    Text("\"Hi👋🏻 welcome to my video\"")
-                        .font(.system(size: 22, weight: .regular))
-                        .multilineTextAlignment(.center)
-                        .fixedSize(horizontal: false, vertical: true)
-                        .padding(.bottom, -10)
-                    
-                    
-                    Text("eyh.dev")
-                        .font(.system(size: 20, weight: .light))
+                    VStack {
+                        Text("Add New Group")
+                            .padding(10)
+                            .foregroundColor(.black)
+                        VStack(alignment: .leading){
+                            TextField("Group name", text: $input1)
+                            Divider()
+                        }
+                        .padding(8)
+                        .foregroundColor(.black)
+                        VStack(alignment: .leading){
+                            TextField("Details", text: $input2)
+                            Divider()
+                        }
+                        .padding(8)
+                        .foregroundColor(.black)
+                    }
+                    .padding(10)
+                    HStack{
+                        Spacer()
+                        Button("Cancel") {
+                            // Action to perform when Save button in the modal is tapped
+                            // You can handle the data entered in the inputs here
+                        }
+                        .font(.system(size: 14))
+                        .foregroundColor(Color.Primary)
+                        .padding(10)
+                        .background(Color.white)
+                        .cornerRadius(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.Primary, lineWidth: 1)
+                        )
+    //                    Spacer()
+                        Button("Save") {
+                            // Action to perform when Save button in the modal is tapped
+                            // You can handle the data entered in the inputs here
+                        }
+                        .font(.system(size: 14))
+                        .foregroundColor(.white)
+                        .padding(10)
+                        .padding(.leading, 5)
+                        .padding(.trailing, 5)
+                        .background(Color.Primary)
+                        .cornerRadius(10)
+                    }
+                    .padding([.leading, .trailing, .bottom])
                 }
-                .padding(.horizontal, 0)
+                .padding(.bottom, 40)
+                .frame(height: 250)
+                .background(Color.white)
+                //
             }
             .frame(maxHeight: .infinity)
             .padding(.bottom, -35)
