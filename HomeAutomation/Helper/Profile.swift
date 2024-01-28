@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct ProfileButton: View {
-    @State private var frameSize: CGFloat = 40
+//    @State private var frameSize: CGFloat = 40
     //    @State private var image: Image = Image(systemName: "person.circle.fill")
     @State private var image: Image = Image("pp")
+    var frameSize: CGFloat
     
     var body: some View {
         Button(action: {
             // Handle button tap action if needed
+          
+
             print("Hello..")
         }) {
             image
@@ -36,6 +39,9 @@ struct ProfileButton: View {
     }
 }
 
+
+
+
 #Preview {
-    ProfileButton()
+    ProfileButton(frameSize: 40)
 }

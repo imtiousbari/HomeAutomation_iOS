@@ -11,7 +11,6 @@ struct HomeView: View {
     var body: some View {
         VStack{
             HeroView()
-            //                .background(Color.Primary)
                 .edgesIgnoringSafeArea(.all)
             Hero2View()
             HomeViewQ()
@@ -21,8 +20,12 @@ struct HomeView: View {
     }
 }
 
+
 struct HeroView: View {
+    @State var isActive: Bool = false
+
     var body: some View {
+        
         ZStack {
             Color.Primary
                 .edgesIgnoringSafeArea(.all)
@@ -57,9 +60,15 @@ struct HeroView: View {
                             .frame(width: 20, height: 20)
                         Text("Wed, May 24th")
                             .font(.system(size: 14))
+                        
                     }
+                    
                     Spacer()
-                    ProfileButton()
+
+                        
+                        
+                        ProfileButton(frameSize: 40)
+                    
                 }
                 .padding(.top)
                 HStack{
