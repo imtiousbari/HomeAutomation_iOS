@@ -11,6 +11,17 @@ struct ProfileView: View {
     var body: some View {
         VStack{
             ZStack {
+                VStack{
+//                    Text("Hello")
+                    ProfileButton(frameSize: 80)
+                    Text("User Name")
+                        .font(.system(size: 18))
+                        .fontWeight(.bold)
+                        .padding()
+                
+                }
+                .padding(.top,50)
+                .zIndex(2)
                 Color.Primary
                     .edgesIgnoringSafeArea(.all)
                 
@@ -21,11 +32,7 @@ struct ProfileView: View {
                     .foregroundColor(.white)
                     .padding()
                     .offset( x:50, y: 80)
-                VStack{
-//                    Text("Hello")
-                    ProfileButton(frameSize: 80)
-                
-                }
+               
                 .foregroundColor(.white)
                 //            .padding()
                 //            .padding(.bottom,50)

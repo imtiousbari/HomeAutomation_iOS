@@ -8,16 +8,19 @@
 import SwiftUI
 
 struct HomeViewQ: View {
+    @State private var showingAlert = false
     var body: some View {
         NavigationView {
             VStack{
                 Header2V()
             }
+//
         }
     }
 }
 
 struct Header2V: View {
+//    @Binding var isShowingAlert: Bool
     @State private var selectedTab = 0
     @State var showingAlert = false
     let tabTexts = ["My Home","New Tab 1", "New Tab 2", "+ New Group"]
@@ -88,8 +91,13 @@ struct Header2V: View {
                 //                .offset(y: -30)
                 .background(Color.Bg)
                 .navigationBarHidden(true)
-                BottomSheet(isShowing: $showingAlert)
-                    .padding(.bottom,20)
+//                BottomSheet(isShowing: $showingAlert)
+                .overlay(
+                                    BottomSheet(isShowing: $showingAlert)
+                                        .padding(.bottom,20)
+                                        .edgesIgnoringSafeArea(.all)
+                                )
+//                    .padding(.bottom,20)
 //                    .background(Color.Bg)
             }
             
