@@ -9,8 +9,10 @@ import SwiftUI
 
 struct HomeViewQ: View {
     var body: some View {
-        VStack{
-            Header2V()
+        NavigationView {
+            VStack{
+                Header2V()
+            }
         }
     }
 }

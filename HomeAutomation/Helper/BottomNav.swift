@@ -14,7 +14,7 @@ struct BottomNav: View {
         
              VStack(spacing: 0) {
                  TabView(selection: $selectedTab) {
-                     HomeView()
+                     demo()
                          .tabItem {
                              Image(systemName: "house")
                              Text("Home")

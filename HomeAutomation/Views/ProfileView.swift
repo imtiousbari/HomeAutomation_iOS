@@ -37,6 +37,7 @@ struct ProfileView: View {
             .cornerRadius(20, corners: [/*.topLeft, .topRight,*/ .bottomLeft, .bottomRight])
             Spacer()
         }
+        .foregroundColor(Color.white)
         .edgesIgnoringSafeArea(.all)
     }
 }

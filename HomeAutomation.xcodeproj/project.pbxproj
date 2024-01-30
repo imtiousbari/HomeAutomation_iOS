@@ -10,6 +10,7 @@
 		721AC7A82B5BBBBC00F33F3D /* CusBootmSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721AC7A72B5BBBBC00F33F3D /* CusBootmSheet.swift */; };
 		725211DB2B64E51500746D1B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725211DA2B64E51500746D1B /* ProfileView.swift */; };
 		725211DF2B66438200746D1B /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725211DE2B66438200746D1B /* test.swift */; };
+		725211E32B67827B00746D1B /* NavbackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725211E22B67827B00746D1B /* NavbackButton.swift */; };
 		72574AAA2B525DFB000F4C3C /* AddNewCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72574AA92B525DFB000F4C3C /* AddNewCat.swift */; };
 		72574AAC2B57A6F9000F4C3C /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72574AAB2B57A6F9000F4C3C /* BottomSheet.swift */; };
 		72574AB42B592890000F4C3C /* ModalAddGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72574AB32B592890000F4C3C /* ModalAddGroup.swift */; };
@@ -33,6 +34,7 @@
 		721AC7A72B5BBBBC00F33F3D /* CusBootmSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CusBootmSheet.swift; sourceTree = "<group>"; };
 		725211DA2B64E51500746D1B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		725211DE2B66438200746D1B /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
+		725211E22B67827B00746D1B /* NavbackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavbackButton.swift; sourceTree = "<group>"; };
 		72574AA92B525DFB000F4C3C /* AddNewCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCat.swift; sourceTree = "<group>"; };
 		72574AAB2B57A6F9000F4C3C /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
 		72574AB32B592890000F4C3C /* ModalAddGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalAddGroup.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				72BE68892B34056F003FAD7C /* Profile.swift */,
 				72FB0F6D2B3D983A00EC570B /* BottomNav.swift */,
 				72FC32A72B40013E003A48B0 /* CustomBtNv.swift */,
+				725211E22B67827B00746D1B /* NavbackButton.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				72FC32A82B40013E003A48B0 /* CustomBtNv.swift in Sources */,
 				72BE68862B316460003FAD7C /* HomeView.swift in Sources */,
 				72574AB42B592890000F4C3C /* ModalAddGroup.swift in Sources */,
+				725211E32B67827B00746D1B /* NavbackButton.swift in Sources */,
 				72BE688A2B34056F003FAD7C /* Profile.swift in Sources */,
 				72BE68882B32AC00003FAD7C /* Colors.swift in Sources */,
 				72BE68772B315A2C003FAD7C /* ContentView.swift in Sources */,
