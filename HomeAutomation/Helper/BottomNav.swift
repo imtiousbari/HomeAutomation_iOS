@@ -35,9 +35,9 @@ struct BottomNav: View {
                          }
                          .tag(2)
                      
-                     Workinprogress()
+                     ProfileView()
                          .tabItem {
-                             Image(systemName: "envelope")
+                             Image(systemName: "person.fill")
                              Text("Owners")
                          }
                          .tag(3)

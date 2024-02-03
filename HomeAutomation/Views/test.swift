@@ -24,7 +24,7 @@ struct demo:View {
                             .frame(width: 300, height: 50)
                             .foregroundColor(.white)
                             .padding()
-                            .offset( x:50, y: 80)
+                            .offset( x:50, y: 160)
                         //weather
                         HStack{
                             HStack(alignment: .center){
