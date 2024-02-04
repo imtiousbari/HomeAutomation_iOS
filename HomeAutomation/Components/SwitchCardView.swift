@@ -18,9 +18,11 @@ struct SwitchView: View {
             .overlay(
                 VStack {
                     HStack {
-                        Image(systemName: isSwitchOn ? "lightbulb.max.fill" : "lightbulb")
-                            .font(.system(size: isSwitchOn ? 15 : 20))
-                            .foregroundColor(isSwitchOn ? .white : .black)
+                        Image("4gangswth")
+//                            .frame(width:40, height: 40)
+//                        Image(systemName: isSwitchOn ? "lightbulb.max.fill" : "lightbulb")
+//                            .font(.system(size: isSwitchOn ? 15 : 20))
+//                            .foregroundColor(isSwitchOn ? .white : .black)
                         Spacer()
                         Image(systemName: "power.circle")
                             .font(.system(size: 20))

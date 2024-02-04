@@ -17,7 +17,7 @@ struct ProfileView: View {
                         Text("User Name")
                             .font(.system(size: 18))
                             .fontWeight(.bold)
-                            .padding()
+                            .padding(5)
                         
                     }
                     .padding(.top,50)
@@ -34,8 +34,6 @@ struct ProfileView: View {
                         .offset( x:50, y: 80)
                     
                         .foregroundColor(.white)
-                    //            .padding()
-                    //            .padding(.bottom,50)
                 }
                 
                 .background(Color.white)
@@ -52,8 +50,17 @@ struct ProfileView: View {
                         NavigationLink(destination: Workinprogress()) {
                             HStack {
                                 Image(systemName: "person.fill")
-                                    .padding()
                                 
+                                    .frame(width:40, height: 40)
+                                    .background(
+                                        RoundedRectangle(cornerRadius: 50)
+                                            .foregroundColor(Color.Primary)
+                                            .opacity(0.3)
+                                    )
+                                    .foregroundColor(Color.Primary)
+                                    .padding(5)
+                                    .padding(.trailing,4)
+                                //                                Spacer(minLength: 10)
                                 Text("Profile management")
                                     .bold()
                                 Spacer()
@@ -67,7 +74,15 @@ struct ProfileView: View {
                         NavigationLink(destination: Workinprogress()) {
                             HStack {
                                 Image(systemName: "person.fill")
-                                    .padding()
+                                
+                                    .frame(width:40, height: 40)
+                                    .background(
+                                        RoundedRectangle(cornerRadius: 50)
+                                            .foregroundColor(Color.Primary)
+                                            .opacity(0.3)
+                                    )
+                                    .foregroundColor(Color.Primary)
+                                    .padding(5)
                                 
                                 Text("Home management")
                                     .bold()
@@ -82,8 +97,15 @@ struct ProfileView: View {
                         NavigationLink(destination: Workinprogress()) {
                             HStack {
                                 Image(systemName: "person.fill")
-                                    .padding()
                                 
+                                    .frame(width:40, height: 40)
+                                    .background(
+                                        RoundedRectangle(cornerRadius: 50)
+                                            .foregroundColor(Color.Primary)
+                                            .opacity(0.3)
+                                    )
+                                    .foregroundColor(Color.Primary)
+                                    .padding(5)
                                 Text("Device management")
                                     .bold()
                                 Spacer()
@@ -97,8 +119,15 @@ struct ProfileView: View {
                         NavigationLink(destination: Workinprogress()) {
                             HStack {
                                 Image(systemName: "person.fill")
-                                    .padding()
                                 
+                                    .frame(width:40, height: 40)
+                                    .background(
+                                        RoundedRectangle(cornerRadius: 50)
+                                            .foregroundColor(Color.Primary)
+                                            .opacity(0.3)
+                                    )
+                                    .foregroundColor(Color.Primary)
+                                    .padding(5)
                                 Text("FAQ & Feedback")
                                     .bold()
                                 Spacer()

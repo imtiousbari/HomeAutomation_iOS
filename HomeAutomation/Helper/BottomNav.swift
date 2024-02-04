@@ -14,7 +14,7 @@ struct BottomNav: View {
         
              VStack(spacing: 0) {
                  TabView(selection: $selectedTab) {
-                     demo()
+                     HomeView()
                          .tabItem {
                              Image(systemName: "house")
                              Text("Home")
@@ -42,13 +42,9 @@ struct BottomNav: View {
                          }
                          .tag(3)
                  }
-//                 .background(Color.red)
                  .accentColor(Color.Primary)
                  .colorScheme(.light)
-//                 Spacer()
              }
-//             .foregroundColor(.white)
-//             .background(Color.white.edgesIgnoringSafeArea(.all))
      }
      
  }

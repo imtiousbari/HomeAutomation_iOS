@@ -8,125 +8,215 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State private var isShowingDetailView = false
+    @State private var image: Image = Image("pp")
     var body: some View {
-        VStack{
-            HeroView()
-                .edgesIgnoringSafeArea(.all)
-            Hero2View()
-            HomeViewQ()
-            
-        }
-        .background(Color.Bg)
-    }
-}
-
-
-struct HeroView: View {
-    @State var isActive: Bool = false
-
-    var body: some View {
-        
-        ZStack {
-            Color.Primary
-                .edgesIgnoringSafeArea(.all)
-            
-            Image("IsolationMode")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 300, height: 50)
-                .foregroundColor(.white)
-                .padding()
-                .offset( x:50, y: 80)
+        NavigationView {
             VStack{
-                HStack{
-                    HStack(alignment: .center){
-                        Image("SunWeater")
+                ZStack{
+                    Color.Primary
+                        .edgesIgnoringSafeArea(.all)
+                    VStack{
+                        Image("IsolationMode")
                             .resizable()
-                            .frame(width: 20, height: 20)
-                        Text("28°C")
-                            .font(.system(size: 14))
-                    }
-                    HStack(alignment: .center){
-                        Image("humidity")
-                            .resizable()
-                            .frame(width: 20, height: 20)
-                        Text("28°C")
-                            .font(.system(size: 14))
-                        
-                    }
-                    HStack(alignment: .center){
-                        Image("calendar")
-                            .resizable()
-                            .frame(width: 20, height: 20)
-                        Text("Wed, May 24th")
-                            .font(.system(size: 14))
-                        
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 300, height: 50)
+                            .foregroundColor(.white)
+                            .padding()
+                            .offset( x:50, y: 180)
+                        //weather
+                        HStack{
+                            HStack(alignment: .center){
+                                Image("SunWeater")
+                                    .resizable()
+                                    .frame(width: 20, height: 20)
+                                Text("28°C")
+                                    .font(.system(size: 14))
+                            }
+                            HStack(alignment: .center){
+                                Image("humidity")
+                                    .resizable()
+                                    .frame(width: 20, height: 20)
+                                Text("28°C")
+                                    .font(.system(size: 14))
+                                
+                            }
+                            HStack(alignment: .center){
+                                Image("calendar")
+                                    .resizable()
+                                    .frame(width: 20, height: 20)
+                                Text("Wed, May 24th")
+                                    .font(.system(size: 14))
+                            }
+                            Spacer()
+                            VStack {
+                                NavigationLink(
+                                    destination: ProfileView(),
+                                    isActive: $isShowingDetailView
+                                ) {
+                                    EmptyView()
+                                }
+                                .hidden()
+                                
+                                Button(action: {
+                                    isShowingDetailView = true
+                                }) {
+                                    image
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 40, height: 40)
+                                        .clipShape(Circle())
+                                        .overlay(Circle().stroke(Color.white, lineWidth: 2))
+                                        .background(Circle().foregroundColor(Color.white))
+                                        .shadow(radius: 4)
+                                }
+                            }
+                            .navigationBarBackButtonHidden(true)
+                        }
+                        HStack{
+                            
+                            Text("Hi, Nafiz Zaman")
+                                .font(
+                                    Font.custom("Open Sans", size: 24)
+                                        .weight(.bold)
+                                )
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.white)
+                            Spacer()
+                            Image(systemName: "bell.badge.fill")
+                                .resizable()
+                                .frame(width: 20, height: 25)
+                                .foregroundColor(.white)
+                        }
+                        .padding(.top, 20)
+                        .padding(.bottom, 50)
                     }
                     
-                    Spacer()
-
-                        
-                        
-                        ProfileButton(frameSize: 40)
-                    
+                    .padding(.bottom, 80)
+                    .padding()
                 }
-                .padding(.top)
-                HStack{
-                    
-                    Text("Hi, Nafiz Zaman")
-                        .font(
-                            Font.custom("Open Sans", size: 24)
-                                .weight(.bold)
-                        )
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(.white)
-                    Spacer()
-                    Image(systemName: "bell.badge.fill")
-                        .resizable()
-                        .frame(width: 20, height: 25)
-                        .foregroundColor(.white)
+                .edgesIgnoringSafeArea(.all)
+                .frame(width: 400, height: 250)
+                .cornerRadius(20, corners: [/*.topLeft, .topRight,*/ .bottomLeft, .bottomRight])
+                .foregroundColor(Color.white)
+                .navigationViewStyle(StackNavigationViewStyle())
+                Spacer()
+                //                Hero2View()
+                
+                //cardview
+                HStack {
+                    CardView(imageName: "sun", text: "Get up")
+                    CardView(imageName: "moon", text: "Good night")
+                    CardView(imageName: "goout", text: "Go out")
                 }
-                .padding(.top, 20)
+                .offset(y:-60)
+                Header2V()
+                    .offset(y:-50)
             }
-            .foregroundColor(.white)
-            .padding()
-            .padding(.bottom,50)
+            .edgesIgnoringSafeArea(.all)
+            .background(Color.Bg)
+            
         }
-        .frame(width: 400, height: 250)
-//        .cornerRadius(20)
-        .cornerRadius(20, corners: [/*.topLeft, .topRight,*/ .bottomLeft, .bottomRight])
+        
     }
 }
 
-struct Hero2View: View {
+
+struct Header2V: View {
+    @State private var showingAlert = false
+    @State private var selectedTab = 0
+    let tabTexts = ["My Home","New Tab 1", "New Tab 2", "+ New Group"]
+    
+    let tabViews: [AnyView] = [
+        AnyView(SwitchContent()),
+        AnyView(Workinprogress()),
+        AnyView(Workinprogress()),
+        AnyView(Workinprogress())
+    ]
     var body: some View {
-        HStack {
-            CardView(imageName: "sun", text: "Get up")
-            CardView(imageName: "moon", text: "Good night")
-            CardView(imageName: "goout", text: "Go out")
+        ZStack{
+            VStack {
+                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 15) {
+                        ForEach(0..<tabTexts.count) { index in
+                            if tabTexts[index] == "+ New Group"{
+                                Button(action: {
+                                    showingAlert = true
+                                }) {
+                                    Text(tabTexts[index])
+                                        .font(.system(size: 14))
+                                        .foregroundColor(.black)
+                                        .padding(10)
+                                        .background(Color.white)
+                                        .cornerRadius(10)
+                                }
+                            }
+                            else{
+                                Text(tabTexts[index])
+                                    .font(.system(size: 14))
+                                
+                                    .padding(10)
+                                    .background(index == selectedTab ? Color.Primary : Color.white)
+                                    .cornerRadius(10)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(Color.white, lineWidth: 1)
+                                            .opacity(index != selectedTab ? 1 : 0)
+                                    )
+                                    .foregroundColor(index == selectedTab ? .white : .black)
+                                    .onTapGesture {
+                                        selectedTab = index
+                                    }
+                            }
+                        }
+                        
+                        
+                    }
+                    .padding(.leading, 20)
+                    .padding(.top,5)
+                }
+                TabView(selection: $selectedTab) {
+                    ForEach(0..<tabViews.count) { index in
+                        tabViews[index]
+                            .tag(index)
+                    }
+                }
+                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+                .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+                
+            }
+            .background(Color.Bg)
+            .navigationBarHidden(true)
+            .overlay(
+                BottomSheet(isShowing: $showingAlert)
+                    .padding(.bottom,20)
+                    .edgesIgnoringSafeArea(.all)
+            )
         }
-        .padding(.bottom,10)
-        .padding(.top, -110)
     }
+    
 }
+
+
 struct SwitchContent: View {
     var body: some View {
         
-            VStack(alignment: .leading) {
-                Text("Quick Access")
-                    .fontWeight(.bold)
-                    .font(.title3)
-                    .padding(.leading)
-                    .padding(.top)
-                    .padding(.bottom, -15)
-                    .foregroundColor(.black)
-                ScrollView(.vertical, showsIndicators: false) {
+        VStack(alignment: .leading) {
+            Text("Quick Access")
+                .fontWeight(.bold)
+                .font(.title3)
+                .padding(.leading)
+                .padding(.top)
+                .padding(.bottom, -15)
+                .foregroundColor(.black)
+            ScrollView(.vertical, showsIndicators: false) {
                 LazyVGrid(columns: [GridItem(.flexible(), spacing: 16), GridItem(.flexible(), spacing: 16)], spacing: 16) {
                     ForEach(0..<5) { index in
                         SwitchView()
                     }
                 }
-
+                
                 Spacer()
             }
             .padding()

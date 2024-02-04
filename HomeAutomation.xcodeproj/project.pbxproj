@@ -9,13 +9,10 @@
 /* Begin PBXBuildFile section */
 		721AC7A82B5BBBBC00F33F3D /* CusBootmSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721AC7A72B5BBBBC00F33F3D /* CusBootmSheet.swift */; };
 		725211DB2B64E51500746D1B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725211DA2B64E51500746D1B /* ProfileView.swift */; };
-		725211DF2B66438200746D1B /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725211DE2B66438200746D1B /* test.swift */; };
-		725211E32B67827B00746D1B /* NavbackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725211E22B67827B00746D1B /* NavbackButton.swift */; };
 		72574AAA2B525DFB000F4C3C /* AddNewCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72574AA92B525DFB000F4C3C /* AddNewCat.swift */; };
 		72574AAC2B57A6F9000F4C3C /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72574AAB2B57A6F9000F4C3C /* BottomSheet.swift */; };
 		72574AB42B592890000F4C3C /* ModalAddGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72574AB32B592890000F4C3C /* ModalAddGroup.swift */; };
 		726BF9492B36B63000AB8122 /* Workinprogress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726BF9482B36B63000AB8122 /* Workinprogress.swift */; };
-		726BF94B2B36C76600AB8122 /* HomeViewQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726BF94A2B36C76600AB8122 /* HomeViewQ.swift */; };
 		72AD31C32B382A3A00635BD2 /* SwitchCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AD31C22B382A3A00635BD2 /* SwitchCardView.swift */; };
 		72BE68752B315A2C003FAD7C /* HomeAutomationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BE68742B315A2C003FAD7C /* HomeAutomationApp.swift */; };
 		72BE68772B315A2C003FAD7C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BE68762B315A2C003FAD7C /* ContentView.swift */; };
@@ -33,13 +30,10 @@
 /* Begin PBXFileReference section */
 		721AC7A72B5BBBBC00F33F3D /* CusBootmSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CusBootmSheet.swift; sourceTree = "<group>"; };
 		725211DA2B64E51500746D1B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		725211DE2B66438200746D1B /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
-		725211E22B67827B00746D1B /* NavbackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavbackButton.swift; sourceTree = "<group>"; };
 		72574AA92B525DFB000F4C3C /* AddNewCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCat.swift; sourceTree = "<group>"; };
 		72574AAB2B57A6F9000F4C3C /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
 		72574AB32B592890000F4C3C /* ModalAddGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalAddGroup.swift; sourceTree = "<group>"; };
 		726BF9482B36B63000AB8122 /* Workinprogress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workinprogress.swift; sourceTree = "<group>"; };
-		726BF94A2B36C76600AB8122 /* HomeViewQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewQ.swift; sourceTree = "<group>"; };
 		72AD31C22B382A3A00635BD2 /* SwitchCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchCardView.swift; sourceTree = "<group>"; };
 		72BE68712B315A2C003FAD7C /* HomeAutomation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeAutomation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72BE68742B315A2C003FAD7C /* HomeAutomationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAutomationApp.swift; sourceTree = "<group>"; };
@@ -78,6 +72,29 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		725211E42B6F6E5400746D1B /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				725211E62B6F6E8600746D1B /* JsonData */,
+				725211E52B6F6E7D00746D1B /* Api */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		725211E52B6F6E7D00746D1B /* Api */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		725211E62B6F6E8600746D1B /* JsonData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = JsonData;
+			sourceTree = "<group>";
+		};
 		72BE68682B315A2C003FAD7C = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +119,7 @@
 				72BE68842B31643E003FAD7C /* Views */,
 				72BE68832B316431003FAD7C /* Helper */,
 				72BE68822B316428003FAD7C /* Components */,
+				725211E42B6F6E5400746D1B /* Util */,
 				72BE68742B315A2C003FAD7C /* HomeAutomationApp.swift */,
 				72BE68762B315A2C003FAD7C /* ContentView.swift */,
 				72BE68782B315A2D003FAD7C /* Assets.xcassets */,
@@ -136,7 +154,6 @@
 				72BE68892B34056F003FAD7C /* Profile.swift */,
 				72FB0F6D2B3D983A00EC570B /* BottomNav.swift */,
 				72FC32A72B40013E003A48B0 /* CustomBtNv.swift */,
-				725211E22B67827B00746D1B /* NavbackButton.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -145,9 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				72BE68852B316460003FAD7C /* HomeView.swift */,
-				725211DE2B66438200746D1B /* test.swift */,
 				725211DA2B64E51500746D1B /* ProfileView.swift */,
-				726BF94A2B36C76600AB8122 /* HomeViewQ.swift */,
 				726BF9482B36B63000AB8122 /* Workinprogress.swift */,
 				72574AB32B592890000F4C3C /* ModalAddGroup.swift */,
 				721AC7A72B5BBBBC00F33F3D /* CusBootmSheet.swift */,
@@ -260,19 +275,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				72FB0F6E2B3D983A00EC570B /* BottomNav.swift in Sources */,
-				725211DF2B66438200746D1B /* test.swift in Sources */,
 				721AC7A82B5BBBBC00F33F3D /* CusBootmSheet.swift in Sources */,
 				72FC32A82B40013E003A48B0 /* CustomBtNv.swift in Sources */,
 				72BE68862B316460003FAD7C /* HomeView.swift in Sources */,
 				72574AB42B592890000F4C3C /* ModalAddGroup.swift in Sources */,
-				725211E32B67827B00746D1B /* NavbackButton.swift in Sources */,
 				72BE688A2B34056F003FAD7C /* Profile.swift in Sources */,
 				72BE68882B32AC00003FAD7C /* Colors.swift in Sources */,
 				72BE68772B315A2C003FAD7C /* ContentView.swift in Sources */,
 				725211DB2B64E51500746D1B /* ProfileView.swift in Sources */,
 				72AD31C32B382A3A00635BD2 /* SwitchCardView.swift in Sources */,
 				72BE688C2B341A2D003FAD7C /* CardView.swift in Sources */,
-				726BF94B2B36C76600AB8122 /* HomeViewQ.swift in Sources */,
 				72574AAA2B525DFB000F4C3C /* AddNewCat.swift in Sources */,
 				72BE68752B315A2C003FAD7C /* HomeAutomationApp.swift in Sources */,
 				72574AAC2B57A6F9000F4C3C /* BottomSheet.swift in Sources */,
