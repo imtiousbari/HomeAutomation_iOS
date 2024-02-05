@@ -128,7 +128,7 @@ struct Header2V: View {
     let tabTexts = ["My Home","New Tab 1", "New Tab 2", "+ New Group"]
     
     let tabViews: [AnyView] = [
-        AnyView(SwitchContent()),
+        AnyView(SwiftUIView()),
         AnyView(Workinprogress()),
         AnyView(Workinprogress()),
         AnyView(Workinprogress())

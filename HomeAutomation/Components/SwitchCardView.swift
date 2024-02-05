@@ -18,8 +18,9 @@ struct SwitchView: View {
             .overlay(
                 VStack {
                     HStack {
-                        Image("4gangswth")
-//                            .frame(width:40, height: 40)
+                        Image(isSwitchOn ? "4gangswthL" : "4gangswth")
+                            .resizable()
+                            .frame(width:20, height: 20)
 //                        Image(systemName: isSwitchOn ? "lightbulb.max.fill" : "lightbulb")
 //                            .font(.system(size: isSwitchOn ? 15 : 20))
 //                            .foregroundColor(isSwitchOn ? .white : .black)
@@ -34,14 +35,16 @@ struct SwitchView: View {
                     .padding(15)
                     Spacer()
                     HStack {
-                        Text("Bedroom Light 01:")
+                        Text("Room 01:")
                             .foregroundColor(isSwitchOn ? .white : .black)
                             .font(.system(size: 12))
+                        Spacer()
                         Text(isSwitchOn ? "ON" : "OFF")
                             .foregroundColor(isSwitchOn ? Color.CusYellow : .green)
                             .font(.system(size: 12))
                     }
-                    .padding(.bottom, 10)
+                    .padding()
+//                    .padding(.bottom, 10)
                 }
             )
             .onTapGesture {
