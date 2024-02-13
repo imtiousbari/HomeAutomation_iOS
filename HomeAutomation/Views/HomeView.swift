@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    
     @State private var isShowingDetailView = false
     @State private var image: Image = Image("pp")
     var body: some View {
@@ -99,7 +100,7 @@ struct HomeView: View {
                 .frame(width: 400, height: 250)
                 .cornerRadius(20, corners: [/*.topLeft, .topRight,*/ .bottomLeft, .bottomRight])
                 .foregroundColor(Color.white)
-                .navigationViewStyle(StackNavigationViewStyle())
+//                .navigationViewStyle(StackNavigationViewStyle())
                 Spacer()
                 //                Hero2View()
                 
@@ -112,7 +113,10 @@ struct HomeView: View {
                 .offset(y:-60)
                 
                 Header2V()
+//                RoomStchV()
                     .offset(y:-50)
+                
+
             }
             .edgesIgnoringSafeArea(.all)
             .background(Color.Bg)
@@ -134,71 +138,70 @@ struct Header2V: View {
         AnyView(Workinprogress()),
         AnyView(Workinprogress())
     ]
+    
     var body: some View {
-        ZStack{
-            VStack {
-                
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 15) {
-                        ForEach(0..<tabTexts.count) { index in
-                            if tabTexts[index] == "+ New Group"{
-                                Button(action: {
-                                    showingAlert = true
-                                }) {
+        NavigationView {
+            ZStack {
+                VStack {
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 15) {
+                            ForEach(0..<tabTexts.count, id: \.self) { index in
+                                if tabTexts[index] == "+ New Group" {
+                                    Button(action: {
+                                        showingAlert = true
+                                    }) {
+                                        Text(tabTexts[index])
+                                            .font(.system(size: 14))
+                                            .foregroundColor(.black)
+                                            .padding(10)
+                                            .background(Color.white)
+                                            .cornerRadius(10)
+                                    }
+                                } else {
                                     Text(tabTexts[index])
                                         .font(.system(size: 14))
-                                        .foregroundColor(.black)
                                         .padding(10)
-                                        .background(Color.white)
+                                        .background(index == selectedTab ? Color.Primary : Color.white)
                                         .cornerRadius(10)
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 15)
+                                                .stroke(Color.white, lineWidth: 1)
+                                                .opacity(index != selectedTab ? 1 : 0)
+                                        )
+                                        .foregroundColor(index == selectedTab ? .white : .black)
+                                        .onTapGesture {
+                                            selectedTab = index
+                                        }
                                 }
+                                    
                             }
-                            else{
-                                Text(tabTexts[index])
-                                    .font(.system(size: 14))
-                                
-                                    .padding(10)
-                                    .background(index == selectedTab ? Color.Primary : Color.white)
-                                    .cornerRadius(10)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 15)
-                                            .stroke(Color.white, lineWidth: 1)
-                                            .opacity(index != selectedTab ? 1 : 0)
-                                    )
-                                    .foregroundColor(index == selectedTab ? .white : .black)
-                                    .onTapGesture {
-                                        selectedTab = index
-                                    }
-                            }
+//                            .padding(.leading,20)
+                            .padding(.top,5)
                         }
-                        
-                        
                     }
-                    .padding(.leading, 20)
-                    .padding(.top,5)
-                }
-                TabView(selection: $selectedTab) {
-                    ForEach(0..<tabViews.count) { index in
-                        tabViews[index]
-                            .tag(index)
+                    .padding(.leading)
+                    TabView(selection: $selectedTab) {
+                        ForEach(0..<tabViews.count, id: \.self) { index in
+                            tabViews[index]
+                                .tag(index)
+                                .onAppear {
+                                    print("Current index: \(index)")
+                                }
+                        }
                     }
+                    .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .never))
                 }
-                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-                .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
-                
+                .background(Color.Bg)
+                .navigationBarHidden(true)
+                .overlay(
+                    BottomSheet(isShowing: $showingAlert)
+                        .padding(.bottom,20)
+                        .edgesIgnoringSafeArea(.all)
+                )
             }
-            .background(Color.Bg)
-            .navigationBarHidden(true)
-            .overlay(
-                BottomSheet(isShowing: $showingAlert)
-                    .padding(.bottom,20)
-                    .edgesIgnoringSafeArea(.all)
-            )
         }
     }
-    
 }
-
 
 //struct SwitchContent: View {
 //    var body: some View {

@@ -47,6 +47,7 @@ struct SwitchesView: View {
     }
 }
 
+
 struct RoomStchV: View {
     //    let room: Room
     @State private var rooms: [Room] = []
@@ -103,7 +104,7 @@ struct RoomStchV: View {
                     Spacer()
                 }
                 .padding(  )
-                .buttonStyle(PlainButtonStyle())
+//                .buttonStyle(PlainButtonStyle())
             }
             .background(Color.Bg)
             .onAppear {
