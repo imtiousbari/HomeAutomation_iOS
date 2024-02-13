@@ -1,0 +1,60 @@
+
+{
+  "rooms": [
+    {
+      "id": 1,
+      "roomName": "Living Room",
+      "status": 1,
+      "switches": [
+        {"name": "Switch 1", "status": 0},
+        {"name": "Switch 2", "status": 1},
+        {"name": "Switch 3", "status": 0},
+        {"name": "Switch 4", "status": 1}
+      ]
+    },
+    {
+      "id": 2,
+      "roomName": "Bedroom",
+      "status": 0,
+      "switches": [
+        {"name": "Switch 1", "status": 1},
+        {"name": "Switch 2", "status": 0},
+        {"name": "Switch 3", "status": 1},
+        {"name": "Switch 4", "status": 0}
+      ]
+    },
+    {
+      "id": 3,
+      "roomName": "Kitchen",
+      "status": 0,
+      "switches": [
+        {"name": "Switch 1", "status": 1},
+        {"name": "Switch 2", "status": 0},
+        {"name": "Switch 3", "status": 1},
+        {"name": "Switch 4", "status": 0}
+      ]
+    },
+    {
+      "id": 4,
+      "roomName": "Bathroom",
+      "status": 1,
+      "switches": [
+        {"name": "Switch 1", "status": 0},
+        {"name": "Switch 2", "status": 1},
+        {"name": "Switch 3", "status": 0},
+        {"name": "Switch 4", "status": 1}
+      ]
+    },
+    {
+      "id": 5,
+      "roomName": "Home Office",
+      "status": 1,
+      "switches": [
+        {"name": "Switch 1", "status": 0},
+        {"name": "Switch 2", "status": 1},
+        {"name": "Switch 3", "status": 0},
+        {"name": "Switch 4", "status": 1}
+      ]
+    }
+  ]
+}

@@ -110,6 +110,7 @@ struct HomeView: View {
                     CardView(imageName: "goout", text: "Go out")
                 }
                 .offset(y:-60)
+                
                 Header2V()
                     .offset(y:-50)
             }
@@ -128,7 +129,7 @@ struct Header2V: View {
     let tabTexts = ["My Home","New Tab 1", "New Tab 2", "+ New Group"]
     
     let tabViews: [AnyView] = [
-        AnyView(SwiftUIView()),
+        AnyView(RoomStchV()),
         AnyView(Workinprogress()),
         AnyView(Workinprogress()),
         AnyView(Workinprogress())
@@ -199,30 +200,30 @@ struct Header2V: View {
 }
 
 
-struct SwitchContent: View {
-    var body: some View {
-        
-        VStack(alignment: .leading) {
-            Text("Quick Access")
-                .fontWeight(.bold)
-                .font(.title3)
-                .padding(.leading)
-                .padding(.top)
-                .padding(.bottom, -15)
-                .foregroundColor(.black)
-            ScrollView(.vertical, showsIndicators: false) {
-                LazyVGrid(columns: [GridItem(.flexible(), spacing: 16), GridItem(.flexible(), spacing: 16)], spacing: 16) {
-                    ForEach(0..<5) { index in
-                        SwitchView()
-                    }
-                }
-                
-                Spacer()
-            }
-            .padding()
-        }
-    }
-}
+//struct SwitchContent: View {
+//    var body: some View {
+//        
+//        VStack(alignment: .leading) {
+//            Text("Quick Access")
+//                .fontWeight(.bold)
+//                .font(.title3)
+//                .padding(.leading)
+//                .padding(.top)
+//                .padding(.bottom, -15)
+//                .foregroundColor(.black)
+//            ScrollView(.vertical, showsIndicators: false) {
+//                LazyVGrid(columns: [GridItem(.flexible(), spacing: 16), GridItem(.flexible(), spacing: 16)], spacing: 16) {
+//                    ForEach(0..<5) { index in
+//                        SwitchView()
+//                    }
+//                }
+//                
+//                Spacer()
+//            }
+//            .padding()
+//        }
+//    }
+//}
 
 
 
