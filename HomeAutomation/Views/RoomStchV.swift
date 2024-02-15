@@ -53,7 +53,9 @@ struct RoomStchV: View {
     @State private var rooms: [Room] = []
     
     var body: some View {
-        NavigationView {
+//        NavigationView {
+//            HomeView()
+//                .offset(y:-60)
             VStack(alignment: .leading) {
                 
                 Text("Quick Access")
@@ -106,12 +108,13 @@ struct RoomStchV: View {
                 .padding(  )
 //                .buttonStyle(PlainButtonStyle())
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.Bg)
             .onAppear {
                 loadData()
             }
             //            .navigationBarTitle("Rooms")
-        }
+//        }
     }
     
     func loadData() {

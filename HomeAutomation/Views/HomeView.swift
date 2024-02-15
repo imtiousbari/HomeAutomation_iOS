@@ -113,7 +113,7 @@ struct HomeView: View {
                 .offset(y:-60)
                 
                 Header2V()
-//                RoomStchV()
+////                RoomStchV()
                     .offset(y:-50)
                 
 
@@ -199,6 +199,8 @@ struct Header2V: View {
                         .edgesIgnoringSafeArea(.all)
                 )
             }
+            
+            //
         }
     }
 }

@@ -28,7 +28,7 @@ struct BottomNav: View {
                          }
                          .tag(1)
                      
-                     Workinprogress()
+                     AuthPage()
                          .tabItem {
                              Image(systemName: "square.grid.2x2")
                              Text("Automation")
