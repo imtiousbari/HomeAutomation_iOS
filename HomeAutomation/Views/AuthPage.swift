@@ -28,43 +28,43 @@ struct AuthPage: View {
                     .padding(.bottom, 30)
                 
                 VStack(alignment: .leading) {
-                    ZStack {
-                        HStack{
-                            Image(systemName: "person.fill")
-                                .foregroundColor(.white)
-                                .padding(.leading)
-                            TextField("", text: $username)
-                                .padding(.vertical, 8)
-                                .placeholder(when: username.isEmpty) {
-                                    Text("User name").foregroundColor(.white.opacity(0.6))
-                                }
-                        }
-                        .padding(.top,2.5)
-                        .padding(.bottom,2.5)
-                        .background(Color.gray.opacity(0.2))
-                        .cornerRadius(8)
-                        .foregroundColor(.white)
+                    HStack{
+                        Image(systemName: "person.fill")
+                            .foregroundColor(.white)
+                            .padding(.leading)
+                        TextField("", text: $username)
+                            .padding(.vertical, 8)
+                            .placeholder(when: username.isEmpty) {
+                                Text("User name").foregroundColor(.white.opacity(0.6))
+                            }
                     }
+                    .padding(.top,2.5)
+                    .padding(.bottom,2.5)
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(8)
+                    .foregroundColor(.white)
                     .padding(5)
-                    
                     .overlay(
                         RoundedRectangle(cornerRadius: 8)
                             .stroke(Color.white.opacity(1), lineWidth: 1)
                         
                     )
                     .padding(.bottom, 20)
+                    //
+                
+                    
+                    
+                    
                     
                     HStack {
                         Image(systemName: "lock.fill")
                             .foregroundColor(.white)
-                            .padding(.leading, 8)
+                            .padding(.leading)
                         
                         SecureField("Password", text: $password)
-                            .padding(.vertical, 12)
-                            .padding(.horizontal, 8)
-                            .cornerRadius(8)
-                            .foregroundColor(.white)
-                            .placeholder(when: username.isEmpty) {
+                            .padding(.vertical, 8)
+                            
+                            .placeholder(when: password.isEmpty) {
                                 Text("Password").foregroundColor(.white.opacity(0.6))
                             }
                         
@@ -72,14 +72,20 @@ struct AuthPage: View {
                             isPasswordHidden.toggle()
                         }) {
                             Image(systemName: isPasswordHidden ? "eye.fill" : "eye.slash.fill")
-                                .foregroundColor(.blue)
+                                .foregroundColor(.white)
                                 .padding(.trailing, 8)
                         }
                     }
-                    .padding(.bottom, 10)
+                    .padding(.top,2.5)
+                    .padding(.bottom,2.5)
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(8)
+                    .foregroundColor(.white)
+                    .padding(5)
+//                    .padding(.bottom, 10)
                     .overlay(
                         RoundedRectangle(cornerRadius: 8)
-                            .stroke(Color.white.opacity(0.7), lineWidth: 1)
+                            .stroke(Color.white.opacity(1), lineWidth: 1)
                     )
                 }
                 .padding(.horizontal)
@@ -88,10 +94,10 @@ struct AuthPage: View {
                     // Perform login action
                 }) {
                     Text("Sign In")
-                        .foregroundColor(.white)
+                        .foregroundColor(Color.Primary)
                         .padding()
                         .frame(maxWidth: .infinity)
-                        .background(Color.blue)
+                        .background(Color.white)
                         .cornerRadius(8)
                 }
                 .padding(.top, 20)
