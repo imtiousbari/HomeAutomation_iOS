@@ -59,16 +59,16 @@ struct SecuredTextFieldView: View {
     /// binded with the @State property of the parent view of SecuredTextFieldView.
     @Binding var text: String
     
+    
     /// Parent view of this SecuredTextFieldView.
     /// Also this is a struct and structs are value type.
     @State var parent: SecuredTextFieldParentProtocol
-    
+    @State private var password = ""
     var body: some View {
         
         HStack {
-            //            ZStack(alignment: .trailing) {
             Image(systemName: "lock.fill")
-                .foregroundColor(.blue)
+                .foregroundColor(.white)
                 .padding(.leading)
             ZStack(alignment: .trailing) {
                 securedTextField
@@ -77,12 +77,11 @@ struct SecuredTextFieldView: View {
                 }, label: {
                     Image(systemName: self.isSecured ? "eye.slash" : "eye")
                         .accentColor(.gray)
-                        .foregroundColor(.black)
+                        .foregroundColor(.white)
                 })
-                .padding()
+                .padding(10)
                 
             }
-            
         }
         .padding(.top,2.5)
         .padding(.bottom,2.5)
@@ -108,20 +107,26 @@ struct SecuredTextFieldView: View {
                 .textInputAutocapitalization(.never)
                 .keyboardType(.asciiCapable) // This avoids suggestions bar on the keyboard.
                 .autocorrectionDisabled(true)
-                .padding(.bottom, 7)
+//                .padding(.bottom, 7)
                 .focused($focusedField, equals: .hidePasswordField)
                 .opacity(hidePasswordFieldOpacity.rawValue)
+                .placeholder(when: text.isEmpty) {
+                                                Text("Password").foregroundColor(.white.opacity(0.4))
+                                            }
             TextField("Enter Text", text: $text)
                 .textInputAutocapitalization(.never)
                 .keyboardType(.asciiCapable)
                 .autocorrectionDisabled(true)
-                .padding(.bottom, 7)
+//                .padding(.bottom, 7)
                 .focused($focusedField, equals: .showPasswordField)
                 .opacity(showPasswordFieldOpacity.rawValue)
-                .padding()
+//                .padding()
+                .placeholder(when: text.isEmpty) {
+                                                Text("Password").foregroundColor(.white.opacity(0.4))
+                                            }
             
         }
-        .padding(.trailing, 32)
+//        .padding(.trailing, 32)
     }
     
     /// This supports the parent view to perform hide the keyboard.

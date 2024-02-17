@@ -93,7 +93,6 @@
 			children = (
 				725211E62B6F6E8600746D1B /* JsonData */,
 				725211E52B6F6E7D00746D1B /* Api */,
-				72D28D202B80A43000BA80B2 /* SecuredTextFieldView.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -163,6 +162,7 @@
 				72AD31C22B382A3A00635BD2 /* SwitchCardView.swift */,
 				72574AA92B525DFB000F4C3C /* AddNewCat.swift */,
 				72574AAB2B57A6F9000F4C3C /* BottomSheet.swift */,
+				72D28D202B80A43000BA80B2 /* SecuredTextFieldView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
