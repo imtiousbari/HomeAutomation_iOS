@@ -7,12 +7,13 @@
 
 import SwiftUI
 
-struct AuthPage: View {
+struct AuthPage: View, SecuredTextFieldParentProtocol {
     @State private var username: String = ""
-    @State private var password: String = ""
-    @State private var isPasswordHidden: Bool = true
-    @State private var isShowingAlert: Bool = false
-    
+    @State private var password = ""
+//    @State private var isPasswordHidden: Bool = true
+//    @State private var isShowingAlert: Bool = false
+    @State var hideKeyboard: (() -> Void)?
+    @State private var showingAlert = false
     var body: some View {
         NavigationView {
             VStack {
@@ -56,37 +57,49 @@ struct AuthPage: View {
                     
                     
                     
-                    HStack {
-                        Image(systemName: "lock.fill")
-                            .foregroundColor(.white)
-                            .padding(.leading)
-                        
-                        SecureField("Password", text: $password)
-                            .padding(.vertical, 8)
-                            
-                            .placeholder(when: password.isEmpty) {
-                                Text("Password").foregroundColor(.white.opacity(0.6))
+//                    HStack {
+//                        Image(systemName: "lock.fill")
+//                            .foregroundColor(.white)
+//                            .padding(.leading)
+//                        
+//                        SecureField("Password", text: $password)
+//                            .padding(.vertical, 8)
+//                            
+//                            .placeholder(when: password.isEmpty) {
+//                                Text("Password").foregroundColor(.white.opacity(0.6))
+//                            }
+//                        
+//                        Button(action: {
+//                            isPasswordHidden.toggle()
+//                        }) {
+//                            Image(systemName: isPasswordHidden ? "eye.fill" : "eye.slash.fill")
+//                                .foregroundColor(.white)
+//                                .padding(.trailing, 8)
+//                        }
+//                    }
+//                    .padding(.top,2.5)
+//                    .padding(.bottom,2.5)
+//                    .background(Color.gray.opacity(0.2))
+//                    .cornerRadius(8)
+//                    .foregroundColor(.white)
+//                    .padding(5)
+////                    .padding(.bottom, 10)
+//                    .overlay(
+//                        RoundedRectangle(cornerRadius: 8)
+//                            .stroke(Color.white.opacity(1), lineWidth: 1)
+//                    )
+                    GeometryReader { geometry in
+                        VStack {
+                            Group {
+                                VStack {
+                                    SecuredTextFieldView(text: $password, parent: self)
+            //                            .frame(maxWidth: geometry.size.width * 1)
+                                }
                             }
-                        
-                        Button(action: {
-                            isPasswordHidden.toggle()
-                        }) {
-                            Image(systemName: isPasswordHidden ? "eye.fill" : "eye.slash.fill")
-                                .foregroundColor(.white)
-                                .padding(.trailing, 8)
+            //                .frame(maxHeight: geometry.size.height * 0.33)
                         }
                     }
-                    .padding(.top,2.5)
-                    .padding(.bottom,2.5)
-                    .background(Color.gray.opacity(0.2))
-                    .cornerRadius(8)
-                    .foregroundColor(.white)
-                    .padding(5)
-//                    .padding(.bottom, 10)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 8)
-                            .stroke(Color.white.opacity(1), lineWidth: 1)
-                    )
+                    .padding()
                 }
                 .padding(.horizontal)
                 
@@ -113,6 +126,14 @@ struct AuthPage: View {
             
         }
         
+    }
+    private func performHideKeyboard() {
+        
+        guard let hideKeyboard = self.hideKeyboard else {
+            return
+        }
+        
+        hideKeyboard()
     }
     
 }

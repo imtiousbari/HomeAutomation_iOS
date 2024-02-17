@@ -28,6 +28,8 @@
 		72D28D1A2B7B444E00BA80B2 /* RoomStchV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D28D192B7B444E00BA80B2 /* RoomStchV.swift */; };
 		72D28D1D2B7DD42A00BA80B2 /* MultiNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D28D1C2B7DD42A00BA80B2 /* MultiNav.swift */; };
 		72D28D1F2B7DE20000BA80B2 /* AuthPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D28D1E2B7DE20000BA80B2 /* AuthPage.swift */; };
+		72D28D212B80A43000BA80B2 /* SecuredTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D28D202B80A43000BA80B2 /* SecuredTextFieldView.swift */; };
+		72D28D232B80A4E600BA80B2 /* SecureTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D28D222B80A4E600BA80B2 /* SecureTextView.swift */; };
 		72FB0F6E2B3D983A00EC570B /* BottomNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FB0F6D2B3D983A00EC570B /* BottomNav.swift */; };
 		72FC32A82B40013E003A48B0 /* CustomBtNv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC32A72B40013E003A48B0 /* CustomBtNv.swift */; };
 		7F614BD7AD1B6E4A47C86BFD /* Pods_HomeAutomation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B42275AA0650FA6BC74A302 /* Pods_HomeAutomation.framework */; };
@@ -56,6 +58,8 @@
 		72D28D192B7B444E00BA80B2 /* RoomStchV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomStchV.swift; sourceTree = "<group>"; };
 		72D28D1C2B7DD42A00BA80B2 /* MultiNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiNav.swift; sourceTree = "<group>"; };
 		72D28D1E2B7DE20000BA80B2 /* AuthPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPage.swift; sourceTree = "<group>"; };
+		72D28D202B80A43000BA80B2 /* SecuredTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecuredTextFieldView.swift; sourceTree = "<group>"; };
+		72D28D222B80A4E600BA80B2 /* SecureTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureTextView.swift; sourceTree = "<group>"; };
 		72FB0F6D2B3D983A00EC570B /* BottomNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNav.swift; sourceTree = "<group>"; };
 		72FC32A72B40013E003A48B0 /* CustomBtNv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBtNv.swift; sourceTree = "<group>"; };
 		74DC8D7C9999C76674E583F1 /* Pods-HomeAutomation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeAutomation.debug.xcconfig"; path = "Target Support Files/Pods-HomeAutomation/Pods-HomeAutomation.debug.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 			children = (
 				725211E62B6F6E8600746D1B /* JsonData */,
 				725211E52B6F6E7D00746D1B /* Api */,
+				72D28D202B80A43000BA80B2 /* SecuredTextFieldView.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				72D28D1C2B7DD42A00BA80B2 /* MultiNav.swift */,
+				72D28D222B80A4E600BA80B2 /* SecureTextView.swift */,
 			);
 			path = tForDemoTest;
 			sourceTree = "<group>";
@@ -302,11 +308,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72D28D212B80A43000BA80B2 /* SecuredTextFieldView.swift in Sources */,
 				72FB0F6E2B3D983A00EC570B /* BottomNav.swift in Sources */,
 				72D28D1D2B7DD42A00BA80B2 /* MultiNav.swift in Sources */,
 				721AC7A82B5BBBBC00F33F3D /* CusBootmSheet.swift in Sources */,
 				725211EA2B70AFFE00746D1B /* SwiftUIView.swift in Sources */,
 				72FC32A82B40013E003A48B0 /* CustomBtNv.swift in Sources */,
+				72D28D232B80A4E600BA80B2 /* SecureTextView.swift in Sources */,
 				72BE68862B316460003FAD7C /* HomeView.swift in Sources */,
 				72574AB42B592890000F4C3C /* ModalAddGroup.swift in Sources */,
 				72BE688A2B34056F003FAD7C /* Profile.swift in Sources */,
