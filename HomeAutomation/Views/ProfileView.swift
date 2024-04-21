@@ -43,7 +43,7 @@ struct ProfileView: View {
                 //            Spacer()
                 ZStack(alignment:.top){
                     Rectangle()
-                        .frame(width:350, height:260)
+                        .frame(width:350, height:270)
                         .cornerRadius(20)
                     VStack{
                         
@@ -73,7 +73,7 @@ struct ProfileView: View {
                         }
                         NavigationLink(destination: Workinprogress()) {
                             HStack {
-                                Image(systemName: "person.fill")
+                                Image(systemName: "house.fill")
                                 
                                     .frame(width:40, height: 40)
                                     .background(
@@ -96,7 +96,7 @@ struct ProfileView: View {
                         }
                         NavigationLink(destination: Workinprogress()) {
                             HStack {
-                                Image(systemName: "person.fill")
+                                Image(systemName: "switch.programmable.square.fill")
                                 
                                     .frame(width:40, height: 40)
                                     .background(
@@ -118,7 +118,7 @@ struct ProfileView: View {
                         }
                         NavigationLink(destination: Workinprogress()) {
                             HStack {
-                                Image(systemName: "person.fill")
+                                Image(systemName: "doc.questionmark.fill")
                                 
                                     .frame(width:40, height: 40)
                                     .background(
@@ -152,6 +152,9 @@ struct ProfileView: View {
             .foregroundColor(Color.white)
             .edgesIgnoringSafeArea(.all)
         }
+//        .navigationBarBackButtonHidden(true)
+//        .navigationBarHidden(false)
+
     }
 }
 

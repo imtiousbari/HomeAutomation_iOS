@@ -55,6 +55,7 @@
         {"name": "Switch 3", "status": 0},
         {"name": "Switch 4", "status": 1}
       ]
-    }
+    },
+    
   ]
 }

@@ -76,8 +76,10 @@ struct SecuredTextFieldView: View {
                     performToggle()
                 }, label: {
                     Image(systemName: self.isSecured ? "eye.slash" : "eye")
+                        .resizable().frame(width:25, height: 20)
                         .accentColor(.gray)
                         .foregroundColor(.white)
+                        
                 })
                 .padding(10)
                 

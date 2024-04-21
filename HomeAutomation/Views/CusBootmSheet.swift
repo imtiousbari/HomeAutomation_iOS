@@ -35,7 +35,7 @@ struct BottomSheet: View {
     var body: some View {
         ZStack(alignment: .center) {
             if (isShowing) {
-                Color.gray.opacity(isShowing ? 0.3 : 0)
+                Color.gray.opacity(isShowing ? 0.8 : 0)
 //                Color.clear
 //                    .opacity(0.3)
                     .ignoresSafeArea()

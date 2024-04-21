@@ -45,6 +45,7 @@ struct BottomNav: View {
                  .accentColor(Color.Primary)
                  .colorScheme(.light)
              }
+         
      }
      
  }

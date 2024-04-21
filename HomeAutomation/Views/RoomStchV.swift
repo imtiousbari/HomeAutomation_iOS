@@ -24,28 +24,7 @@ struct RoomsData: Decodable {
     let rooms: [Room]
 }
 
-struct SwitchesView: View {
-    let room: Room
-    
-    var body: some View {
-        VStack(alignment: .leading) {
-            //            Text("Switches in \(room.roomName)")
-            //                .font(.title)
-            //                .padding()
-            
-            List(room.switches) { switchItem in
-                HStack {
-                    Text(switchItem.name)
-                    Spacer()
-                    Image(systemName: switchItem.status == 1 ? "lightbulb.fill" : "lightbulb")
-                        .foregroundColor(switchItem.status == 1 ? .yellow : .gray)
-                }
-                .padding()
-            }
-        }
-        .navigationBarTitle("\(room.roomName) Switches")
-    }
-}
+
 
 
 struct RoomStchV: View {
@@ -53,9 +32,6 @@ struct RoomStchV: View {
     @State private var rooms: [Room] = []
     
     var body: some View {
-//        NavigationView {
-//            HomeView()
-//                .offset(y:-60)
             VStack(alignment: .leading) {
                 
                 Text("Quick Access")
@@ -63,9 +39,9 @@ struct RoomStchV: View {
                     .font(.title3)
                     .padding(.leading)
                     .padding(.top)
-                    .padding(.bottom, -15)
+//                    .padding(.bottom, -15)
                     .foregroundColor(.black)
-                ScrollView(.vertical, showsIndicators: false) {
+                ScrollView(.vertical, showsIndicators: true) {
                     LazyVGrid(columns: [GridItem(.flexible(), spacing: 16), GridItem(.flexible(), spacing: 0)], spacing: 0) {
                         ForEach(rooms) { room in
                             NavigationLink(destination: SwitchesView(room: room)) {
@@ -99,22 +75,21 @@ struct RoomStchV: View {
                                     )
                                     .foregroundColor(room.status == 1 ? .Primary : .white)
                             }
+//                            .navigationBarBackButtonHidden(false)
                             .buttonStyle(PlainButtonStyle())
                         }
                         .padding(8)
                     }
                     Spacer()
-                }
-                .padding(  )
-//                .buttonStyle(PlainButtonStyle())
+                } //
+//                .edgesIgnoringSafeArea(.all)
+//                .frame(height: .infinity)
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .edgesIgnoringSafeArea(.bottom)
             .background(Color.Bg)
             .onAppear {
                 loadData()
             }
-            //            .navigationBarTitle("Rooms")
-//        }
     }
     
     func loadData() {

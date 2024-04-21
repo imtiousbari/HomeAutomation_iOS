@@ -14,7 +14,11 @@
 		72574AAC2B57A6F9000F4C3C /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72574AAB2B57A6F9000F4C3C /* BottomSheet.swift */; };
 		72574AB42B592890000F4C3C /* ModalAddGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72574AB32B592890000F4C3C /* ModalAddGroup.swift */; };
 		726BF9492B36B63000AB8122 /* Workinprogress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726BF9482B36B63000AB8122 /* Workinprogress.swift */; };
+		7271C8132BD532EE00E6102E /* SwitchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7271C8122BD532EE00E6102E /* SwitchesView.swift */; };
+		729003782B84730700CF843B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729003772B84730700CF843B /* UserModel.swift */; };
+		7290037A2B8473C800CF843B /* log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729003792B8473C800CF843B /* log.swift */; };
 		72AD31C32B382A3A00635BD2 /* SwitchCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AD31C22B382A3A00635BD2 /* SwitchCardView.swift */; };
+		72B58A4D2BD4E80800725EBC /* HomeViewNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B58A4C2BD4E80700725EBC /* HomeViewNew.swift */; };
 		72BE68752B315A2C003FAD7C /* HomeAutomationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BE68742B315A2C003FAD7C /* HomeAutomationApp.swift */; };
 		72BE68772B315A2C003FAD7C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BE68762B315A2C003FAD7C /* ContentView.swift */; };
 		72BE68792B315A2D003FAD7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72BE68782B315A2D003FAD7C /* Assets.xcassets */; };
@@ -43,7 +47,11 @@
 		72574AAB2B57A6F9000F4C3C /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
 		72574AB32B592890000F4C3C /* ModalAddGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalAddGroup.swift; sourceTree = "<group>"; };
 		726BF9482B36B63000AB8122 /* Workinprogress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workinprogress.swift; sourceTree = "<group>"; };
+		7271C8122BD532EE00E6102E /* SwitchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchesView.swift; sourceTree = "<group>"; };
+		729003772B84730700CF843B /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		729003792B8473C800CF843B /* log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = log.swift; sourceTree = "<group>"; };
 		72AD31C22B382A3A00635BD2 /* SwitchCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchCardView.swift; sourceTree = "<group>"; };
+		72B58A4C2BD4E80700725EBC /* HomeViewNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewNew.swift; sourceTree = "<group>"; };
 		72BE68712B315A2C003FAD7C /* HomeAutomation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeAutomation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72BE68742B315A2C003FAD7C /* HomeAutomationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAutomationApp.swift; sourceTree = "<group>"; };
 		72BE68762B315A2C003FAD7C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -113,6 +121,14 @@
 			path = JsonData;
 			sourceTree = "<group>";
 		};
+		729003762B8472EA00CF843B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				729003772B84730700CF843B /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		72BE68682B315A2C003FAD7C = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +150,7 @@
 		72BE68732B315A2C003FAD7C /* HomeAutomation */ = {
 			isa = PBXGroup;
 			children = (
+				729003762B8472EA00CF843B /* Model */,
 				72BE68842B31643E003FAD7C /* Views */,
 				72BE68832B316431003FAD7C /* Helper */,
 				72BE68822B316428003FAD7C /* Components */,
@@ -182,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				72BE68852B316460003FAD7C /* HomeView.swift */,
+				72B58A4C2BD4E80700725EBC /* HomeViewNew.swift */,
 				72D28D1E2B7DE20000BA80B2 /* AuthPage.swift */,
 				725211DA2B64E51500746D1B /* ProfileView.swift */,
 				726BF9482B36B63000AB8122 /* Workinprogress.swift */,
@@ -189,6 +207,7 @@
 				721AC7A72B5BBBBC00F33F3D /* CusBootmSheet.swift */,
 				725211E92B70AFFD00746D1B /* SwiftUIView.swift */,
 				72D28D192B7B444E00BA80B2 /* RoomStchV.swift */,
+				7271C8122BD532EE00E6102E /* SwitchesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -198,6 +217,7 @@
 			children = (
 				72D28D1C2B7DD42A00BA80B2 /* MultiNav.swift */,
 				72D28D222B80A4E600BA80B2 /* SecureTextView.swift */,
+				729003792B8473C800CF843B /* log.swift */,
 			);
 			path = tForDemoTest;
 			sourceTree = "<group>";
@@ -311,6 +331,7 @@
 				72D28D212B80A43000BA80B2 /* SecuredTextFieldView.swift in Sources */,
 				72FB0F6E2B3D983A00EC570B /* BottomNav.swift in Sources */,
 				72D28D1D2B7DD42A00BA80B2 /* MultiNav.swift in Sources */,
+				7271C8132BD532EE00E6102E /* SwitchesView.swift in Sources */,
 				721AC7A82B5BBBBC00F33F3D /* CusBootmSheet.swift in Sources */,
 				725211EA2B70AFFE00746D1B /* SwiftUIView.swift in Sources */,
 				72FC32A82B40013E003A48B0 /* CustomBtNv.swift in Sources */,
@@ -318,12 +339,15 @@
 				72BE68862B316460003FAD7C /* HomeView.swift in Sources */,
 				72574AB42B592890000F4C3C /* ModalAddGroup.swift in Sources */,
 				72BE688A2B34056F003FAD7C /* Profile.swift in Sources */,
+				72B58A4D2BD4E80800725EBC /* HomeViewNew.swift in Sources */,
+				729003782B84730700CF843B /* UserModel.swift in Sources */,
 				72BE68882B32AC00003FAD7C /* Colors.swift in Sources */,
 				72BE68772B315A2C003FAD7C /* ContentView.swift in Sources */,
 				72D28D1A2B7B444E00BA80B2 /* RoomStchV.swift in Sources */,
 				725211DB2B64E51500746D1B /* ProfileView.swift in Sources */,
 				72AD31C32B382A3A00635BD2 /* SwitchCardView.swift in Sources */,
 				72BE688C2B341A2D003FAD7C /* CardView.swift in Sources */,
+				7290037A2B8473C800CF843B /* log.swift in Sources */,
 				72574AAA2B525DFB000F4C3C /* AddNewCat.swift in Sources */,
 				72BE68752B315A2C003FAD7C /* HomeAutomationApp.swift in Sources */,
 				72574AAC2B57A6F9000F4C3C /* BottomSheet.swift in Sources */,
@@ -387,7 +411,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -444,7 +468,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
