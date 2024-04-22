@@ -56,6 +56,170 @@
         {"name": "Switch 4", "status": 1}
       ]
     },
-    
+    {
+      "id": 6,
+      "roomName": "Dining Room",
+      "status": 1,
+      "switches": [
+        {"name": "Switch 1", "status": 0},
+        {"name": "Switch 2", "status": 1},
+        {"name": "Switch 3", "status": 0},
+        {"name": "Switch 4", "status": 1}
+      ]
+    },
+    {
+      "id": 7,
+      "roomName": "Guest Room",
+      "status": 0,
+      "switches": [
+        {"name": "Switch 1", "status": 1},
+        {"name": "Switch 2", "status": 0},
+        {"name": "Switch 3", "status": 1},
+        {"name": "Switch 4", "status": 0}
+      ]
+    },
+    {
+      "id": 8,
+      "roomName": "Study",
+      "status": 1,
+      "switches": [
+        {"name": "Switch 1", "status": 0},
+        {"name": "Switch 2", "status": 1},
+        {"name": "Switch 3", "status": 0},
+        {"name": "Switch 4", "status": 1}
+      ]
+    },
+    {
+      "id": 9,
+      "roomName": "Kids' Room",
+      "status": 0,
+      "switches": [
+        {"name": "Switch 1", "status": 1},
+        {"name": "Switch 2", "status": 0},
+        {"name": "Switch 3", "status": 1},
+        {"name": "Switch 4", "status": 0}
+      ]
+    },
+    {
+      "id": 10,
+      "roomName": "Utility Room",
+      "status": 1,
+      "switches": [
+        {"name": "Switch 1", "status": 0},
+        {"name": "Switch 2", "status": 1},
+        {"name": "Switch 3", "status": 0},
+        {"name": "Switch 4", "status": 1}
+      ]
+    },
+    {
+      "id": 11,
+      "roomName": "Game Room",
+      "status": 1,
+      "switches": [
+        {"name": "Switch 1", "status": 0},
+        {"name": "Switch 2", "status": 1},
+        {"name": "Switch 3", "status": 0},
+        {"name": "Switch 4", "status": 1}
+      ]
+    },
+    {
+      "id": 12,
+      "roomName": "Library",
+      "status": 0,
+      "switches": [
+        {"name": "Switch 1", "status": 1},
+        {"name": "Switch 2", "status": 0},
+        {"name": "Switch 3", "status": 1},
+        {"name": "Switch 4", "status": 0}
+      ]
+    },
+    {
+      "id": 13,
+      "roomName": "Fitness Room",
+      "status": 1,
+      "switches": [
+        {"name": "Switch 1", "status": 0},
+        {"name": "Switch 2", "status": 1},
+        {"name": "Switch 3", "status": 0},
+        {"name": "Switch 4", "status": 1}
+      ]
+    },
+    {
+      "id": 14,
+      "roomName": "Sunroom",
+      "status": 1,
+      "switches": [
+        {"name": "Switch 1", "status": 0},
+        {"name": "Switch 2", "status": 1},
+        {"name": "Switch 3", "status": 0},
+        {"name": "Switch 4", "status": 1}
+      ]
+    },
+    {
+      "id": 15,
+      "roomName": "Music Room",
+      "status": 0,
+      "switches": [
+        {"name": "Switch 1", "status": 1},
+        {"name": "Switch 2", "status": 0},
+        {"name": "Switch 3", "status": 1},
+        {"name": "Switch 4", "status": 0}
+      ]
+    },
+    {
+      "id": 16,
+      "roomName": "Craft Room",
+      "status": 1,
+      "switches": [
+        {"name": "Switch 1", "status": 0},
+        {"name": "Switch 2", "status": 1},
+        {"name": "Switch 3", "status": 0},
+        {"name": "Switch 4", "status": 1}
+      ]
+    },
+    {
+      "id": 17,
+      "roomName": "Home Theater",
+      "status": 0,
+      "switches": [
+        {"name": "Switch 1", "status": 1},
+        {"name": "Switch 2", "status": 0},
+        {"name": "Switch 3", "status": 1},
+        {"name": "Switch 4", "status": 0}
+      ]
+    },
+    {
+      "id": 18,
+      "roomName": "Meditation Room",
+      "status": 1,
+      "switches": [
+        {"name": "Switch 1", "status": 0},
+        {"name": "Switch 2", "status": 1},
+        {"name": "Switch 3", "status": 0},
+        {"name": "Switch 4", "status": 1}
+      ]
+    },
+    {
+      "id": 19,
+      "roomName": "Guest Bathroom",
+      "status": 1,
+      "switches": [
+        {"name": "Switch 1", "status": 0},
+        {"name": "Switch 2", "status": 1},
+        {"name": "Switch 3", "status": 0},
+        {"name": "Switch 4", "status": 1}
+      ]
+    },
+    {
+      "id": 20,
+      "roomName": "Attic",
+      "status": 0,
+      "switches": [
+        {"name": "Switch 1", "status": 1},
+        {"name": "Switch 2", "status": 0},
+        {"name": "Switch 3", "status": 1},
+        {"name": "Switch 4", "status": 0}
+      ]
+    }
   ]
 }

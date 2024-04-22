@@ -25,8 +25,6 @@ struct RoomsData: Decodable {
 }
 
 
-
-
 struct RoomStchV: View {
     //    let room: Room
     @State private var rooms: [Room] = []
@@ -76,16 +74,18 @@ struct RoomStchV: View {
                                     .foregroundColor(room.status == 1 ? .Primary : .white)
                             }
 //                            .navigationBarBackButtonHidden(false)
-                            .buttonStyle(PlainButtonStyle())
+//                            .buttonStyle(PlainButtonStyle())
                         }
                         .padding(8)
                     }
-                    Spacer()
-                } //
-//                .edgesIgnoringSafeArea(.all)
-//                .frame(height: .infinity)
+//                    Spacer()
+                }.padding([.leading, .trailing])
+                //
+//                .frame(height:320)
             }
-            .edgesIgnoringSafeArea(.bottom)
+//            .padding(.bottom, -90)
+//            .edgesIgnoringSafeArea(.all)
+//            .frame(height: 400)
             .background(Color.Bg)
             .onAppear {
                 loadData()
