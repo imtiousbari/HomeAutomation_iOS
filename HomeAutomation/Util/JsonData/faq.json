@@ -1,0 +1,30 @@
+{
+  "FAQ": [
+    {
+      "id": 1,
+      "question": "How do I install the smart switches?",
+      "answer": "Installing smart switches is similar to installing regular switches, but you'll need to ensure they're compatible with your home's wiring. Follow the instructions provided with the switches carefully. If you're unsure, it's recommended to hire a qualified electrician."
+    },
+    {
+      "id": 2,
+      "question": "What type of smart switches do I need?",
+      "answer": "The type of smart switches you need depends on your requirements and the compatibility with your home's wiring. Make sure to choose switches that are compatible with your home automation system, such as Wi-Fi, Zigbee, or Z-Wave. Also, consider whether you need dimmable switches or switches with additional features like voice control."
+    },
+    {
+      "id": 3,
+      "question": "Can I control the switches remotely?",
+      "answer": "Yes, if your smart switches are connected to a compatible home automation system, such as a smart hub or a smartphone app, you can control them remotely as long as you have an internet connection. This allows you to turn lights on and off, adjust brightness, and schedule routines from anywhere."
+    },
+    {
+      "id": 4,
+      "question": "Do smart switches work with voice assistants?",
+      "answer": "Many smart switches are compatible with popular voice assistants like Amazon Alexa, Google Assistant, and Apple HomeKit. Once set up, you can control your switches using voice commands through your smart speaker or smartphone."
+    },
+    {
+      "id": 5,
+      "question": "What if I experience connectivity issues with my smart switches?",
+      "answer": "If you encounter connectivity issues, try the following troubleshooting steps: 1. Ensure your smart switches are within range of your Wi-Fi network or hub. 2. Check for firmware updates for your switches and hub. 3. Restart your router and hub. 4. Reset the smart switches and reconnect them to your network. If issues persist, contact the manufacturer's support for further assistance."
+    }
+  ]
+}
+

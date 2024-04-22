@@ -11,7 +11,7 @@ struct SwitchesView: View {
     let room: Room
     
     var body: some View {
-        NavigationView{
+        NavigationStack{
             VStack(alignment: .leading) {
                 List(room.switches) { switchItem in
                     HStack {
@@ -23,9 +23,21 @@ struct SwitchesView: View {
                     .padding()
                 }
             }
+            .toolbarBackground(
+
+                            // 1
+                            Color.Primary,
+                            // 2
+                            for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
         }
         .navigationBarTitle("\(room.roomName) Switches")
+        .navigationBarTitleColor(.white)
+        .navigationBarBackButtonHidden(true)
+                    .navigationBarItems(leading: NavBackButton())
         .preferredColorScheme(.light)
+//        .edgesIgnoringSafeArea(.all)
+        
     }
 }
 

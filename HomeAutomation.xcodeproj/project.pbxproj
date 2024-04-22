@@ -17,6 +17,8 @@
 		7271C8132BD532EE00E6102E /* SwitchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7271C8122BD532EE00E6102E /* SwitchesView.swift */; };
 		7271C8152BD62DD200E6102E /* hello.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7271C8142BD62DD200E6102E /* hello.swift */; };
 		7271C8172BD63FDE00E6102E /* customTabHorri.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7271C8162BD63FDE00E6102E /* customTabHorri.swift */; };
+		7271C8192BD677E400E6102E /* faq.json in Resources */ = {isa = PBXBuildFile; fileRef = 7271C8182BD677E400E6102E /* faq.json */; };
+		7271C81B2BD678B900E6102E /* FaqView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7271C81A2BD678B900E6102E /* FaqView.swift */; };
 		729003782B84730700CF843B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729003772B84730700CF843B /* UserModel.swift */; };
 		7290037A2B8473C800CF843B /* log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729003792B8473C800CF843B /* log.swift */; };
 		72AD31C32B382A3A00635BD2 /* SwitchCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AD31C22B382A3A00635BD2 /* SwitchCardView.swift */; };
@@ -35,7 +37,7 @@
 		72D28D1D2B7DD42A00BA80B2 /* MultiNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D28D1C2B7DD42A00BA80B2 /* MultiNav.swift */; };
 		72D28D1F2B7DE20000BA80B2 /* AuthPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D28D1E2B7DE20000BA80B2 /* AuthPage.swift */; };
 		72D28D212B80A43000BA80B2 /* SecuredTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D28D202B80A43000BA80B2 /* SecuredTextFieldView.swift */; };
-		72D28D232B80A4E600BA80B2 /* SecureTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D28D222B80A4E600BA80B2 /* SecureTextView.swift */; };
+		72D28D232B80A4E600BA80B2 /* utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D28D222B80A4E600BA80B2 /* utilities.swift */; };
 		72FB0F6E2B3D983A00EC570B /* BottomNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FB0F6D2B3D983A00EC570B /* BottomNav.swift */; };
 		72FC32A82B40013E003A48B0 /* CustomBtNv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC32A72B40013E003A48B0 /* CustomBtNv.swift */; };
 		7F614BD7AD1B6E4A47C86BFD /* Pods_HomeAutomation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B42275AA0650FA6BC74A302 /* Pods_HomeAutomation.framework */; };
@@ -52,6 +54,8 @@
 		7271C8122BD532EE00E6102E /* SwitchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchesView.swift; sourceTree = "<group>"; };
 		7271C8142BD62DD200E6102E /* hello.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hello.swift; sourceTree = "<group>"; };
 		7271C8162BD63FDE00E6102E /* customTabHorri.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customTabHorri.swift; sourceTree = "<group>"; };
+		7271C8182BD677E400E6102E /* faq.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = faq.json; sourceTree = "<group>"; };
+		7271C81A2BD678B900E6102E /* FaqView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqView.swift; sourceTree = "<group>"; };
 		729003772B84730700CF843B /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		729003792B8473C800CF843B /* log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = log.swift; sourceTree = "<group>"; };
 		72AD31C22B382A3A00635BD2 /* SwitchCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchCardView.swift; sourceTree = "<group>"; };
@@ -71,7 +75,7 @@
 		72D28D1C2B7DD42A00BA80B2 /* MultiNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiNav.swift; sourceTree = "<group>"; };
 		72D28D1E2B7DE20000BA80B2 /* AuthPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPage.swift; sourceTree = "<group>"; };
 		72D28D202B80A43000BA80B2 /* SecuredTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecuredTextFieldView.swift; sourceTree = "<group>"; };
-		72D28D222B80A4E600BA80B2 /* SecureTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureTextView.swift; sourceTree = "<group>"; };
+		72D28D222B80A4E600BA80B2 /* utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utilities.swift; sourceTree = "<group>"; };
 		72FB0F6D2B3D983A00EC570B /* BottomNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNav.swift; sourceTree = "<group>"; };
 		72FC32A72B40013E003A48B0 /* CustomBtNv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBtNv.swift; sourceTree = "<group>"; };
 		74DC8D7C9999C76674E583F1 /* Pods-HomeAutomation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeAutomation.debug.xcconfig"; path = "Target Support Files/Pods-HomeAutomation/Pods-HomeAutomation.debug.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +107,7 @@
 		725211E42B6F6E5400746D1B /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				72D28D222B80A4E600BA80B2 /* utilities.swift */,
 				725211E62B6F6E8600746D1B /* JsonData */,
 				725211E52B6F6E7D00746D1B /* Api */,
 			);
@@ -121,6 +126,7 @@
 			children = (
 				72CE0AC42B70B5670010616C /* QuickAcsRooms.json */,
 				72D28D172B7A047F00BA80B2 /* switch.json */,
+				7271C8182BD677E400E6102E /* faq.json */,
 			);
 			path = JsonData;
 			sourceTree = "<group>";
@@ -213,6 +219,7 @@
 				725211E92B70AFFD00746D1B /* SwiftUIView.swift */,
 				72D28D192B7B444E00BA80B2 /* RoomStchV.swift */,
 				7271C8122BD532EE00E6102E /* SwitchesView.swift */,
+				7271C81A2BD678B900E6102E /* FaqView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -221,7 +228,6 @@
 			isa = PBXGroup;
 			children = (
 				72D28D1C2B7DD42A00BA80B2 /* MultiNav.swift */,
-				72D28D222B80A4E600BA80B2 /* SecureTextView.swift */,
 				729003792B8473C800CF843B /* log.swift */,
 				7271C8142BD62DD200E6102E /* hello.swift */,
 			);
@@ -298,6 +304,7 @@
 				72CE0AC52B70B5670010616C /* QuickAcsRooms.json in Resources */,
 				72D28D182B7A047F00BA80B2 /* switch.json in Resources */,
 				72BE687C2B315A2D003FAD7C /* Preview Assets.xcassets in Resources */,
+				7271C8192BD677E400E6102E /* faq.json in Resources */,
 				72BE68792B315A2D003FAD7C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,7 +349,7 @@
 				7271C8172BD63FDE00E6102E /* customTabHorri.swift in Sources */,
 				725211EA2B70AFFE00746D1B /* SwiftUIView.swift in Sources */,
 				72FC32A82B40013E003A48B0 /* CustomBtNv.swift in Sources */,
-				72D28D232B80A4E600BA80B2 /* SecureTextView.swift in Sources */,
+				72D28D232B80A4E600BA80B2 /* utilities.swift in Sources */,
 				72BE68862B316460003FAD7C /* HomeView.swift in Sources */,
 				72574AB42B592890000F4C3C /* ModalAddGroup.swift in Sources */,
 				72BE688A2B34056F003FAD7C /* Profile.swift in Sources */,
@@ -357,6 +364,7 @@
 				72BE688C2B341A2D003FAD7C /* CardView.swift in Sources */,
 				7290037A2B8473C800CF843B /* log.swift in Sources */,
 				72574AAA2B525DFB000F4C3C /* AddNewCat.swift in Sources */,
+				7271C81B2BD678B900E6102E /* FaqView.swift in Sources */,
 				72BE68752B315A2C003FAD7C /* HomeAutomationApp.swift in Sources */,
 				72574AAC2B57A6F9000F4C3C /* BottomSheet.swift in Sources */,
 				72D28D1F2B7DE20000BA80B2 /* AuthPage.swift in Sources */,
