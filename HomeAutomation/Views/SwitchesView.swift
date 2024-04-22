@@ -25,6 +25,7 @@ struct SwitchesView: View {
             }
         }
         .navigationBarTitle("\(room.roomName) Switches")
+        .preferredColorScheme(.light)
     }
 }
 

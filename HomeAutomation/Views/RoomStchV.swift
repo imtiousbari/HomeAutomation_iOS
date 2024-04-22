@@ -83,9 +83,7 @@ struct RoomStchV: View {
                 //
 //                .frame(height:320)
             }
-//            .padding(.bottom, -90)
-//            .edgesIgnoringSafeArea(.all)
-//            .frame(height: 400)
+
             .background(Color.Bg)
             .onAppear {
                 loadData()

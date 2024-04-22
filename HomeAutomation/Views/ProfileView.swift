@@ -71,6 +71,7 @@ struct ProfileView: View {
                             .padding(.leading).padding(.trailing)
                             .foregroundColor(.black)
                         }
+                        .navigationBarBackButtonHidden(true)
                         NavigationLink(destination: Workinprogress()) {
                             HStack {
                                 Image(systemName: "house.fill")
@@ -94,6 +95,7 @@ struct ProfileView: View {
                             .padding(.leading,20).padding(.trailing,20)
                             .foregroundColor(.black)
                         }
+                        .navigationBarBackButtonHidden(true)
                         NavigationLink(destination: Workinprogress()) {
                             HStack {
                                 Image(systemName: "switch.programmable.square.fill")
@@ -116,6 +118,7 @@ struct ProfileView: View {
                             .padding(.leading,20).padding(.trailing,20)
                             .foregroundColor(.black)
                         }
+                        .navigationBarBackButtonHidden(true)
                         NavigationLink(destination: Workinprogress()) {
                             HStack {
                                 Image(systemName: "doc.questionmark.fill")
@@ -138,6 +141,7 @@ struct ProfileView: View {
                             .padding(.leading,20).padding(.trailing,20)
                             .foregroundColor(.black)
                         }
+                        .navigationBarBackButtonHidden(true)
                         //
                         
                     }

@@ -158,7 +158,7 @@ struct HomeView: View {
                                     .tag(1)
                                 Workinprogress()
                                     .tag(2)
-                                hello()
+                                Workinprogress()
                                     .tag(3)
                             }
                             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
@@ -185,6 +185,7 @@ struct HomeView: View {
             BottomSheet(isShowing: $showingAlert)
 //                .padding(.bottom, 20)
 //                .edgesIgnoringSafeArea(.all)
+                
         )
         
         

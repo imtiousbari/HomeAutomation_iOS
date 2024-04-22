@@ -17,7 +17,7 @@ struct CustomBtNv: View {
                     .tag(0)
                 Workinprogress()
                     .tag(1)
-                hello()
+                Workinprogress()
                     .tag(2)
                 ProfileView()
                     .tag(3)
@@ -73,7 +73,7 @@ struct CustomBtNview: View {
                         .overlay(
                             Rectangle()
                                 .frame(width: selectedTab == 1 ? 80 : 0, height: selectedTab == 1 ? 5 : 0)
-                                .foregroundColor(Color.primary)
+                                .foregroundColor(Color.Primary)
                                 .padding(.top, selectedTab == 1 ? -40 : 0)
                         )
                         Button(action: {
