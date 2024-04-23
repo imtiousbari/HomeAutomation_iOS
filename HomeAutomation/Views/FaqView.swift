@@ -41,50 +41,18 @@ class FAQViewModel: ObservableObject {
 
 
 }
-
-
-//struct FAQView: View {
-//    @ObservedObject var viewModel = FAQViewModel()
-//
-//    var body: some View {
-//        NavigationView {
-//            List(viewModel.faqItems, id: \.id) { faq in
-//                VStack(alignment: .leading) {
-//                    Text(faq.question)
-//                        .font(.headline)
-//                    Text(faq.answer)
-//                        .font(.subheadline)
-//                        .foregroundColor(.black)
-//                }
-//            }
-////            .navigationBarTitle("FAQ")
-//        }
-//    }
-//}
 struct FAQView: View {
     @ObservedObject var viewModel = FAQViewModel()
 
     var body: some View {
         NavigationStack {
-           
+            
                 List(viewModel.faqItems, id: \.id) { faq in
                     FAQRowView(faq: faq)
                 }
-                .toolbarBackground(
-
-                                // 1
-                                Color.Primary,
-                                // 2
-                                for: .navigationBar)
-                .toolbarBackground(.visible, for: .navigationBar)
-               
-//            .navigationBarTitle("\(room.roomName) Switches")
         }
         .navigationBarTitle("FAQ & Feedback")
-        .navigationBarTitleColor(.white)
-        .navigationBarBackButtonHidden(true)
-                    .navigationBarItems(leading: NavBackButton())
-        
+        .edgesIgnoringSafeArea(.all)
     }
 }
 

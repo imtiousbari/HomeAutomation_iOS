@@ -1,0 +1,24 @@
+{
+    "switchesz": [
+        {
+            "id": 1,
+            "name": "Switch 1",
+            "status": 0
+        },
+        {
+            "id": 2,
+            "name": "Switch 2",
+            "status": 1
+        },
+        {
+            "id": 3,
+            "name": "Switch 3",
+            "status": 0
+        },
+        {
+            "id": 4,
+            "name": "Switch 4",
+            "status": 1
+        }
+    ]
+}

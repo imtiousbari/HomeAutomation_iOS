@@ -141,27 +141,16 @@ struct ProfileView: View {
                             .padding(.leading,20).padding(.trailing,20)
                             .foregroundColor(.black)
                         }
-                        
-//                        .navigationBarBackButtonHidden(false)
-//                        .navigationBarTitleDisplayMode(.inline)
-                        
-                        //
-                        
                     }
                     .padding()
-                    
                 }
                 .padding(.top)
                 Spacer()
             }
-            
             .background(Color.Bg)
             .foregroundColor(Color.white)
             .edgesIgnoringSafeArea(.all)
         }
-//        .navigationBarBackButtonHidden(true)
-//        .navigationBarHidden(false)
-
     }
 }
 

@@ -179,7 +179,7 @@ struct HomeView: View {
         
         
         .navigationBarBackButtonHidden(false)
-        .navigationBarHidden(false)
+        .navigationBarHidden(true)
         .overlay(
             
             BottomSheet(isShowing: $showingAlert)
