@@ -7,34 +7,6 @@
 
 import SwiftUI
 
-//struct SwitchesView: View {
-//    let room: Room
-//    @State private var isToggled = false
-//    
-//    var body: some View {
-//        NavigationStack{
-//            VStack(alignment: .leading) {
-//                List(room.switches) { switchItem in
-//                    HStack {
-//                        Text(switchItem.name)
-//                        Spacer()
-//                        Image(systemName: switchItem.status == 1 ? "lightbulb.fill" : "lightbulb")
-//                            .foregroundColor(switchItem.status == 1 ? .yellow : .gray)
-//                        Spacer()
-//                        Toggle("", isOn: $isToggled)
-//                                    .padding()
-////                                    .toggleStyle(SwitchToggleStyle())
-//                        
-//                    }
-//                    .padding()
-//                }
-//            }
-//        }
-//        .navigationBarTitle("\(room.roomName) Switches")
-//        .preferredColorScheme(.light)
-//    }
-//}
-//
 struct SwitchesView: View {
     let room: Room
     @State private var toggleStates: [Bool]
@@ -42,48 +14,97 @@ struct SwitchesView: View {
     init(room: Room) {
         self.room = room
         _toggleStates = State(initialValue: room.switches.map { $0.status == 1 })
-    }
+//    }
+//    init() {
+//        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.purple]
+          // Inline Navigation Title
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
+//        UINavigationBar.appearance() = .purple
+      
+
+        }
     
     var body: some View {
         NavigationStack {
+ 
             VStack(alignment: .leading) {
-               
-                List {
+
+                Image("roomcover")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .edgesIgnoringSafeArea(.top)
+                    .foregroundColor(.white)
+                LazyVGrid(columns: [GridItem(.flexible(), spacing: 0), GridItem(.flexible(), spacing: 0)], spacing: 0) {
                     ForEach(room.switches.indices, id: \.self) { index in
-                        let switchItem = room.switches[index]
-                        HStack {
-                            Text(switchItem.name)
-                            Spacer()
-                            Image(systemName: switchItem.status == 1 ? "lightbulb.fill" : "lightbulb")
-                                .foregroundColor(switchItem.status == 1 ? .yellow : .gray)
-                            Spacer()
-                            Toggle("", isOn: $toggleStates[index])
-                                .padding()
-                        }
-                        .padding()
+                        Rectangle()
+                            .frame(width: 170, height: 120)
+                            .cornerRadius(15)
+                            .foregroundColor(room.switches[index].status == 1 ? .Primary : .white) // Set foreground color
+                            .overlay(
+                                VStack {
+                                    let switchItem = room.switches[index]
+                                    VStack {
+                                        HStack{
+                                            Text(switchItem.name)
+                                                .font(.system(size: 14))
+                                                .foregroundColor(switchItem.status == 1 ? .white : .Primary)
+                                            Spacer()
+                                            Image(systemName: switchItem.status == 1 ? "lightbulb.fill" : "lightbulb")
+                                                .foregroundColor(switchItem.status == 1 ? .yellow : .gray)
+//                                            Spacer()
+                                        }
+                                        .padding([.leading, .trailing])
+                                        Spacer()
+                                        HStack{
+                                            Text(allSwitchesOff() ? "On" : "Off")
+                                                .font(.system(size: 14))
+                                                .foregroundColor(switchItem.status == 1 ? .yellow : .red)
+                                            Spacer()
+                                            Toggle("", isOn: $toggleStates[index])
+                                                
+                                        }
+                                        .padding([.leading, .trailing])
+                                    }
+                                    .padding([.top, .bottom])
+                                    .foregroundColor(switchItem.status == 1 ? .Primary : .white)
+                                }
+                            )
                     }
-                    Button(action: toggleAllSwitches) {
-                        HStack {
-                            Text("Turn \(allSwitchesOff() ? "On" : "Off") All")
-                                .foregroundColor(.white)
-                            Spacer()
-                            Image(systemName: allSwitchesOff() ? "power" : "power")
-                                .resizable()
-                                .frame(width:30, height:30)
-                                .foregroundColor(allSwitchesOff() ? .green : .red)
-                                
-                        }
-                        .padding()
-                        .padding(.trailing,20)
-                        .background(Color.Primary)
-                        .cornerRadius(8)
-                    }
+                    .padding()
+                   
                 }
+                Button(action: toggleAllSwitches) {
+                    HStack {
+                        Text("Turn \(allSwitchesOff() ? "On" : "Off") All")
+                            .foregroundColor(.white)
+                        Spacer()
+                        Image(systemName: allSwitchesOff() ? "power" : "power")
+                            .resizable()
+                            .frame(width:30, height:30)
+                            .foregroundColor(allSwitchesOff() ? .green : .red)
+                    }
+                    .padding()
+                    .padding(.trailing,20)
+                    .background(Color.Primary)
+                    .cornerRadius(8)
+                }
+//                .padding()
+                .padding([.leading, .trailing, .bottom])
+                Spacer()
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.Bg)
+            .padding(.bottom, 20)
+//            .offset(y: -25)
         }
         .navigationBarTitle("\(room.roomName) Switches")
+//        .toolbarBackground(Color.white, for: .navigationBar)
+        
+
         .preferredColorScheme(.light)
     }
+
     
     func toggleAllSwitches() {
         let allOff = allSwitchesOff()

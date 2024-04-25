@@ -73,6 +73,8 @@ struct RoomStchV: View {
                                     )
                                     .foregroundColor(room.status == 1 ? .Primary : .white)
                             }
+                            
+                            
 //                            .navigationBarBackButtonHidden(false)
 //                            .buttonStyle(PlainButtonStyle())
                         }

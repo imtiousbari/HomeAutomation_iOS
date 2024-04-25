@@ -4,8 +4,8 @@
 ////
 ////  Created by Imtious Bari on 17/2/24.
 ////
-//import Foundation
-//import SwiftUI
+import Foundation
+import SwiftUI
 ////navigation title color
 ////extension View {
 ////    func navigationBarTitleColor(_ color: UIColor?) -> some View {
@@ -41,3 +41,16 @@
 //        }
 //    }
 //}
+struct NavigationConfigurator: UIViewControllerRepresentable {
+    var configure: (UINavigationController) -> Void = { _ in }
+
+    func makeUIViewController(context: UIViewControllerRepresentableContext<NavigationConfigurator>) -> UIViewController {
+        UIViewController()
+    }
+    func updateUIViewController(_ uiViewController: UIViewController, context: UIViewControllerRepresentableContext<NavigationConfigurator>) {
+        if let nc = uiViewController.navigationController {
+            self.configure(nc)
+        }
+    }
+
+}
