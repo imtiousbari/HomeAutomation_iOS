@@ -35,7 +35,7 @@ struct SwitchesView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .edgesIgnoringSafeArea(.top)
                     .foregroundColor(.white)
-                LazyVGrid(columns: [GridItem(.flexible(), spacing: 0), GridItem(.flexible(), spacing: 0)], spacing: 0) {
+                LazyVGrid(columns: [GridItem(.flexible(), spacing: 0), GridItem(.flexible(), spacing: 20)], spacing: 0) {
                     ForEach(room.switches.indices, id: \.self) { index in
                         Rectangle()
                             .frame(width: 170, height: 120)
@@ -62,6 +62,9 @@ struct SwitchesView: View {
                                                 .foregroundColor(switchItem.status == 1 ? .yellow : .red)
                                             Spacer()
                                             Toggle("", isOn: $toggleStates[index])
+//                                                .toggleStyle(CustomToggleStyle())
+                                                
+                                               
                                                 
                                         }
                                         .padding([.leading, .trailing])
@@ -70,10 +73,13 @@ struct SwitchesView: View {
                                     .foregroundColor(switchItem.status == 1 ? .Primary : .white)
                                 }
                             )
+                            
                     }
-                    .padding()
+                    .padding(8)
                    
                 }
+                .padding(8)
+                
                 Button(action: toggleAllSwitches) {
                     HStack {
                         Text("Turn \(allSwitchesOff() ? "On" : "Off") All")
@@ -96,8 +102,10 @@ struct SwitchesView: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.Bg)
             .padding(.bottom, 20)
+            
 //            .offset(y: -25)
         }
+        
         .navigationBarTitle("\(room.roomName) Switches")
 //        .toolbarBackground(Color.white, for: .navigationBar)
         

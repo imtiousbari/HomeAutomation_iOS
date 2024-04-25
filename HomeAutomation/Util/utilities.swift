@@ -54,3 +54,20 @@ struct NavigationConfigurator: UIViewControllerRepresentable {
     }
 
 }
+struct CustomToggleStyle: ToggleStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        RoundedRectangle(cornerRadius: 50)
+            .fill(configuration.isOn ? Color.green : Color.orange.opacity(0.9)) // Customize the background color here
+            .frame(width: 55, height: 30) // Adjust the size as needed
+            .overlay(
+                Circle()
+                    .fill(Color.white)
+                    .frame(width: 26, height: 26)
+                    .offset(x: configuration.isOn ? 12 : -12, y: 0) // Move the circle based on toggle state
+                    .animation(Animation.easeInOut(duration: 0.2))
+            )
+            .onTapGesture {
+                configuration.isOn.toggle()
+            }
+    }
+}
