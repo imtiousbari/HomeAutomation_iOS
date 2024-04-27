@@ -10,25 +10,13 @@ import SwiftUI
 struct SwitchesView: View {
     let room: Room
     @State private var toggleStates: [Bool]
-    
     init(room: Room) {
         self.room = room
         _toggleStates = State(initialValue: room.switches.map { $0.status == 1 })
-//    }
-//    init() {
-//        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.purple]
-          // Inline Navigation Title
-        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
-//        UINavigationBar.appearance() = .purple
-      
-
         }
-    
     var body: some View {
         NavigationStack {
- 
             VStack(alignment: .leading) {
-
                 Image("roomcover")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
@@ -62,10 +50,6 @@ struct SwitchesView: View {
                                                 .foregroundColor(switchItem.status == 1 ? .yellow : .red)
                                             Spacer()
                                             Toggle("", isOn: $toggleStates[index])
-//                                                .toggleStyle(CustomToggleStyle())
-                                                
-                                               
-                                                
                                         }
                                         .padding([.leading, .trailing])
                                     }
@@ -73,7 +57,6 @@ struct SwitchesView: View {
                                     .foregroundColor(switchItem.status == 1 ? .Primary : .white)
                                 }
                             )
-                            
                     }
                     .padding(8)
                    
@@ -103,7 +86,6 @@ struct SwitchesView: View {
             .background(Color.Bg)
             .padding(.bottom, 20)
             
-//            .offset(y: -25)
         }
         
         .navigationBarTitle("\(room.roomName) Switches")
@@ -111,7 +93,9 @@ struct SwitchesView: View {
         
 
         .preferredColorScheme(.light)
+        
     }
+   
 
     
     func toggleAllSwitches() {

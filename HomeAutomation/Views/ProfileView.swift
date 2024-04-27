@@ -96,7 +96,7 @@ struct ProfileView: View {
                             .foregroundColor(.black)
                         }
                         .navigationBarBackButtonHidden(true)
-                        NavigationLink(destination: Workinprogress()) {
+                        NavigationLink(destination: DeviceManagement()) {
                             HStack {
                                 Image(systemName: "switch.programmable.square.fill")
                                 
@@ -118,7 +118,7 @@ struct ProfileView: View {
                             .padding(.leading,20).padding(.trailing,20)
                             .foregroundColor(.black)
                         }
-                        .navigationBarBackButtonHidden(true)
+                        .navigationBarBackButtonHidden(false)
                         NavigationLink(destination: FAQView()) {
                             HStack {
                                 Image(systemName: "doc.questionmark.fill")

@@ -22,6 +22,7 @@
 		7271C8212BD7860400E6102E /* switchmodifytest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7271C8202BD7860400E6102E /* switchmodifytest.swift */; };
 		7271C8262BD79E7100E6102E /* OfficeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7271C8252BD79E7100E6102E /* OfficeData.swift */; };
 		7271C8282BD79ED100E6102E /* OfficeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7271C8272BD79ED100E6102E /* OfficeView.swift */; };
+		7271C82C2BDCDB8700E6102E /* DeviceManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7271C82B2BDCDB8700E6102E /* DeviceManagement.swift */; };
 		729003782B84730700CF843B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729003772B84730700CF843B /* UserModel.swift */; };
 		72AD31C32B382A3A00635BD2 /* SwitchCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AD31C22B382A3A00635BD2 /* SwitchCardView.swift */; };
 		72B58A4D2BD4E80800725EBC /* HomeViewNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B58A4C2BD4E80700725EBC /* HomeViewNew.swift */; };
@@ -60,6 +61,7 @@
 		7271C8202BD7860400E6102E /* switchmodifytest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = switchmodifytest.swift; sourceTree = "<group>"; };
 		7271C8252BD79E7100E6102E /* OfficeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeData.swift; sourceTree = "<group>"; };
 		7271C8272BD79ED100E6102E /* OfficeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeView.swift; sourceTree = "<group>"; };
+		7271C82B2BDCDB8700E6102E /* DeviceManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManagement.swift; sourceTree = "<group>"; };
 		729003772B84730700CF843B /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		72AD31C22B382A3A00635BD2 /* SwitchCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchCardView.swift; sourceTree = "<group>"; };
 		72B58A4C2BD4E80700725EBC /* HomeViewNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewNew.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				72B58A4C2BD4E80700725EBC /* HomeViewNew.swift */,
 				72D28D1E2B7DE20000BA80B2 /* AuthPage.swift */,
 				725211DA2B64E51500746D1B /* ProfileView.swift */,
+				7271C82B2BDCDB8700E6102E /* DeviceManagement.swift */,
 				726BF9482B36B63000AB8122 /* Workinprogress.swift */,
 				72574AB32B592890000F4C3C /* ModalAddGroup.swift */,
 				721AC7A72B5BBBBC00F33F3D /* CusBootmSheet.swift */,
@@ -347,6 +350,7 @@
 			files = (
 				72D28D212B80A43000BA80B2 /* SecuredTextFieldView.swift in Sources */,
 				72FB0F6E2B3D983A00EC570B /* BottomNav.swift in Sources */,
+				7271C82C2BDCDB8700E6102E /* DeviceManagement.swift in Sources */,
 				7271C8282BD79ED100E6102E /* OfficeView.swift in Sources */,
 				7271C8132BD532EE00E6102E /* SwitchesView.swift in Sources */,
 				721AC7A82B5BBBBC00F33F3D /* CusBootmSheet.swift in Sources */,

@@ -21,6 +21,9 @@ class FAQViewModel: ObservableObject {
 
     init() {
         loadFAQ()
+//            UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.red]
+//                    UIBarButtonItem.appearance().tintColor = UIColor.red
+            
     }
 
     func loadFAQ() {
@@ -43,16 +46,26 @@ class FAQViewModel: ObservableObject {
 }
 struct FAQView: View {
     @ObservedObject var viewModel = FAQViewModel()
-
     var body: some View {
-        NavigationStack {
-            
+        
+            ZStack{
+//                Image("roomcover")
+//                    .resizable()
+////                    .aspectRatio(contentMode: .fill)
+////                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+//                    .edgesIgnoringSafeArea(.top)
+//                    .foregroundColor(.white)
+                NavigationStack {
                 List(viewModel.faqItems, id: \.id) { faq in
                     FAQRowView(faq: faq)
                 }
+//                .offset(y: -50)
+                
+            }
+                
         }
-        .navigationBarTitle("FAQ & Feedback")
-        .edgesIgnoringSafeArea(.all)
+            .navigationBarTitle("FAQ & Feedback")
+//        .edgesIgnoringSafeArea(.all)
     }
 }
 

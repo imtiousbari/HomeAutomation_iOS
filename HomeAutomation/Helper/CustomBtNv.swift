@@ -9,10 +9,13 @@ import SwiftUI
 
 struct CustomBtNv: View {
     @State private var selectedTab = 0
-    
+    init(){
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
+        UIBarButtonItem.appearance().tintColor = UIColor.white
+        }
     var body: some View {
         ZStack {
-            TabView(selection: $selectedTab) {
+            TabView(selection: $selectedTab){
                 HomeView()
                     .tag(0)
                 Workinprogress()
@@ -22,8 +25,6 @@ struct CustomBtNv: View {
                 ProfileView()
                     .tag(3)
             }
-//            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never)) // Hide page indicator
-//                        .frame(maxWidth: .infinity, maxHeight: .infinity)
             CustomBtNview(selectedTab: $selectedTab)
         }
     }
@@ -113,8 +114,8 @@ struct CustomBtNview: View {
                                 .padding(.top, selectedTab == 3 ? -40 : 0)
                         )
                     }
-                    .padding([.leading, .trailing], 10)
-                    .padding(.bottom, 10)
+                        .padding([.leading, .trailing], 10)
+                        .padding(.bottom, 10)
                 )
         }
         .edgesIgnoringSafeArea(.all)
