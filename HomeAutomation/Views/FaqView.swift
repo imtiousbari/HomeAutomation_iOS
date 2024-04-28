@@ -18,14 +18,11 @@ struct FAQItem: Codable, Identifiable {
 
 class FAQViewModel: ObservableObject {
     @Published var faqItems: [FAQItem] = []
-
+    
     init() {
         loadFAQ()
-//            UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.red]
-//                    UIBarButtonItem.appearance().tintColor = UIColor.red
-            
     }
-
+    
     func loadFAQ() {
         if let url = Bundle.main.url(forResource: "faq", withExtension: "json") {
             do {
@@ -41,38 +38,35 @@ class FAQViewModel: ObservableObject {
             print("File not found")
         }
     }
-
-
+    
+    
 }
 struct FAQView: View {
     @ObservedObject var viewModel = FAQViewModel()
     var body: some View {
-        
-            ZStack{
-//                Image("roomcover")
-//                    .resizable()
-////                    .aspectRatio(contentMode: .fill)
-////                                .frame(maxWidth: .infinity, maxHeight: .infinity)
-//                    .edgesIgnoringSafeArea(.top)
-//                    .foregroundColor(.white)
-                NavigationStack {
-                List(viewModel.faqItems, id: \.id) { faq in
+        NavigationStack {
+            VStack(alignment: .leading){
+                
+                Text("Frequently asked \nquestions")
+                    .font(.title)
+                    .fontWeight(.heavy)
+                ForEach(viewModel.faqItems, id: \.id) { faq in
                     FAQRowView(faq: faq)
                 }
-//                .offset(y: -50)
-                
             }
-                
+//            Spacer()
         }
-            .navigationBarTitle("FAQ & Feedback")
-//        .edgesIgnoringSafeArea(.all)
+        .padding()
+//        .navigationBarTitle("FAQ & Feedback")
+        .navigationSplitViewColumnWidth(20)
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
 struct FAQRowView: View {
     @State private var isExpanded: Bool = false
     let faq: FAQItem
-
+    
     var body: some View {
         VStack(alignment: .leading) {
             Button(action: {
@@ -84,8 +78,8 @@ struct FAQRowView: View {
                     Text(faq.question)
                         .font(.headline)
                         .foregroundColor(.black)
+                        .multilineTextAlignment(.leading)
                     Spacer()
-//                    Image(systemName: <#T##String#>)
                     Image(systemName:"chevron.forward")
                         .foregroundColor(.gray)
                         .rotationEffect(Angle(degrees: isExpanded ? 90 : 0))
@@ -97,14 +91,13 @@ struct FAQRowView: View {
                     .font(.subheadline)
                     .foregroundColor(.black)
                     .padding([.top, .bottom])
-                                }
-            
-        }
+            }
+         }
     }
 }
 
 
 #Preview {
- FAQView()
-
+    FAQView()
+    
 }
