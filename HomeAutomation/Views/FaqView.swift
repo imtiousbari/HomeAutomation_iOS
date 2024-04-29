@@ -45,18 +45,25 @@ struct FAQView: View {
     @ObservedObject var viewModel = FAQViewModel()
     var body: some View {
         NavigationStack {
-            VStack(alignment: .leading){
-                
-                Text("Frequently asked \nquestions")
-                    .font(.title)
-                    .fontWeight(.heavy)
-                ForEach(viewModel.faqItems, id: \.id) { faq in
-                    FAQRowView(faq: faq)
+            VStack{
+                ScrollView{
+                    VStack(alignment: .leading){
+                        
+                        Text("Frequently asked \nquestions")
+                            .font(.title)
+                            .fontWeight(.heavy)
+                        ForEach(viewModel.faqItems, id: \.id) { faq in
+                            FAQRowView(faq: faq)
+                        }
+                    }
+                    .padding()
                 }
+                Spacer()
+                ContactForm()
+//                    .padding(.bottom,10)
             }
 //            Spacer()
         }
-        .padding()
 //        .navigationBarTitle("FAQ & Feedback")
         .navigationSplitViewColumnWidth(20)
         .edgesIgnoringSafeArea(.all)
