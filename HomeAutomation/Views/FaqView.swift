@@ -66,6 +66,7 @@ struct FAQView: View {
         }
 //        .navigationBarTitle("FAQ & Feedback")
         .navigationSplitViewColumnWidth(20)
+        .preferredColorScheme(.light)
         .edgesIgnoringSafeArea(.all)
     }
 }

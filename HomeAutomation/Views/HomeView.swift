@@ -13,7 +13,7 @@ struct HomeView: View {
     @State private var image: Image = Image("pp")
     @State private var showingAlert = false
     @State private var selectedTab = 0
-    let tabItems = ["My Home","New Tab 1", "New Tab 2", "+ New Group"]
+    let tabItems = ["My Home","My Office", "New Tab 2", "+ New Group"]
         var body: some View {
         NavigationView {
                     VStack {
@@ -154,7 +154,7 @@ struct HomeView: View {
                             TabView(selection: $selectedTab) {
                                 RoomStchV()
                                     .tag(0)
-                                Workinprogress()
+                                SmartOfficeView()
                                     .tag(1)
                                 Workinprogress()
                                     .tag(2)

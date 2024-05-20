@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContactForm: View {
-    @State private var isSheetPresented = true
+    @State private var isSheetPresented = false
     @State private var name = ""
     @State private var email = ""
     @State private var phone = ""
@@ -115,6 +115,7 @@ struct ContactFormView: View {
         }
         .padding()
         .background(Color.Bg.opacity(0.1))
+        .preferredColorScheme(.light)
     }
 }
 

@@ -101,9 +101,9 @@ struct RoomStchV: View {
                 let roomsData = try decoder.decode(RoomsData.self, from: data)
                 
                 rooms = roomsData.rooms
-                
                 // Print to verify data
                 print(rooms)
+                
             } catch {
                 print("Error loading data: \(error)")
             }

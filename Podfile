@@ -6,5 +6,6 @@ target 'HomeAutomation' do
   use_frameworks!
 
   # Pods for HomeAutomation
-
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
 end

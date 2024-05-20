@@ -101,6 +101,14 @@ struct SwitchesView: View {
     func toggleAllSwitches() {
         let allOff = allSwitchesOff()
         toggleStates = Array(repeating: allOff, count: toggleStates.count)
+        let toggleStatus = toggleStates.map { $0 ? 1 : 0 }
+        print("Toggle States: \(toggleStatus)")
+
+        for (index, switchState) in toggleStates.enumerated() {
+            let switchName = room.switches[index].name
+            let switchStatus = switchState ? "On" : "Off"
+            print("Switch \(switchName) is \(switchStatus)")
+        }
     }
     
     private func allSwitchesOff() -> Bool {
