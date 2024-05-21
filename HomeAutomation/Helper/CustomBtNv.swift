@@ -20,7 +20,7 @@ struct CustomBtNv: View {
                     .tag(0)
                 Workinprogress()
                     .tag(1)
-                QRCodeScannerView()
+                Workinprogress()
                     .tag(2)
                 ProfileView()
                     .tag(3)
